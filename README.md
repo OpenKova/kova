@@ -1,4 +1,8 @@
-# Kova Agent ☤
+<div align="center">
+
+<img src="assets/banner.png" alt="Kova Agent" width="720"/>
+
+</div>
 
 > **The self-improving AI agent — your bots, your cloud, your rules.**
 > Kova creates skills from experience, remembers who you are, runs scheduled
@@ -62,10 +66,9 @@ Full docs at [kova.neuralstudio.in/docs](https://kova.neuralstudio.in/docs)
 ## Credits & license
 
 Kova Agent is an independent product by **Neural Studio**
-([neuralstudio.in](https://neuralstudio.in)), built as a fork of the
-excellent open-source [Kova Agent](https://github.com/OpenKova/kova)
-by Neural Studio. Huge thanks to the upstream team — the learning loop
-architecture, gateway, and desktop app are their work.
+([neuralstudio.in](https://neuralstudio.in)), built on the excellent
+MIT-licensed [Hermes Agent](https://github.com/NousResearch/hermes-agent)
+by Nous Research — see [HONORS.md](HONORS.md).
 
-MIT — see [LICENSE](LICENSE). The Kova name and logo remain trademarks of
+MIT — see [LICENSE](LICENSE). The Kova name and logo are trademarks of
 Neural Studio; this project is an independent product.
