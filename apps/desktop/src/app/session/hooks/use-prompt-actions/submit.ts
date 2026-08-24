@@ -1,7 +1,7 @@
 import { type MutableRefObject, useCallback } from 'react'
 
-import { PROMPT_SUBMIT_REQUEST_TIMEOUT_MS } from '@/kova'
 import type { Translations } from '@/i18n'
+import { PROMPT_SUBMIT_REQUEST_TIMEOUT_MS } from '@/kova'
 import { type ChatMessage, textPart } from '@/lib/chat-messages'
 import { optimisticAttachmentRef } from '@/lib/chat-runtime'
 import { sanitizeComposerInput } from '@/lib/composer-input-sanitize'

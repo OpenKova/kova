@@ -12,8 +12,8 @@
  * the other just learned.
  */
 
-import { getHermesConfigRecord, type McpTestResult, testMcpServer } from '@/kova'
 import { translateNow } from '@/i18n'
+import { getHermesConfigRecord, type McpTestResult, testMcpServer } from '@/kova'
 import { classifyProbe, freshProbe, probeCache, probeKey } from '@/lib/mcp-probe-cache'
 import { notify } from '@/store/notifications'
 import { $activeGatewayProfile, normalizeProfileKey } from '@/store/profile'

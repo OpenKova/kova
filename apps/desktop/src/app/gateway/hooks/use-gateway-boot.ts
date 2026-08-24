@@ -2,8 +2,8 @@ import { isGatewayReauthRequired, resolveGatewayWsUrl } from '@kova/shared'
 import { useEffect, useRef } from 'react'
 
 import type { HermesConnection } from '@/global'
-import { HermesGateway } from '@/kova'
 import { translateNow } from '@/i18n'
+import { HermesGateway } from '@/kova'
 import { desktopDefaultCwd } from '@/lib/desktop-fs'
 import { reconnectBackoffDelayMs } from '@/lib/reconnect-backoff'
 import {

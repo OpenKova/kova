@@ -123,10 +123,7 @@ test('rejects on a child error event', async () => {
 
 test('rejects with the timeout message after the deadline', async () => {
   const child = makeFakeChild()
-  await assert.rejects(
-    waitForDashboardPort(child, 20),
-    /Timed out waiting for Kova backend port announcement \(20ms\)/
-  )
+  await assert.rejects(waitForDashboardPort(child, 20), /Timed out waiting for Kova backend port announcement \(20ms\)/)
 })
 
 test('a late announcement after timeout does not throw (listeners torn down)', async () => {
