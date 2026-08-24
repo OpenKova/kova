@@ -492,7 +492,7 @@ configure_managed_node_npm_prefix() {
     printf 'prefix=%s\n' "$(dirname "$link_dir")" > "$KOVA_HOME/node/etc/npmrc"
 }
 
-get_hermes_command_path() {
+get_kova_command_path() {
     local link_dir
     link_dir="$(get_command_link_dir)"
     if [ -x "$link_dir/kova" ]; then
@@ -1736,7 +1736,7 @@ setup_path() {
         KOVA_BIN="$INSTALL_DIR/venv/bin/python"
         KOVA_ENTRYPOINT="$INSTALL_DIR/kova"
     else
-        KOVA_BIN="$(which hermes 2>/dev/null || echo "")"
+        KOVA_BIN="$(which kova 2>/dev/null || echo "")"
         if [ -z "$KOVA_BIN" ]; then
             log_warn "kova not found on PATH after install"
             return 0
@@ -2651,7 +2651,7 @@ maybe_start_gateway() {
             log_info "Running 'kova whatsapp' to pair via QR code..."
             echo ""
             if prompt_yes_no "Pair WhatsApp now?" "yes"; then
-                KOVA_CMD="$(get_hermes_command_path)"
+                KOVA_CMD="$(get_kova_command_path)"
                 $KOVA_CMD whatsapp || true
             fi
         else
@@ -2680,7 +2680,7 @@ maybe_start_gateway() {
     fi
 
     if [ "$should_install_gateway" = true ]; then
-        KOVA_CMD="$(get_hermes_command_path)"
+        KOVA_CMD="$(get_kova_command_path)"
 
         if [ "$DISTRO" != "termux" ] && command -v systemctl &> /dev/null; then
             log_info "Installing systemd service..."
