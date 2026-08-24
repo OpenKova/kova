@@ -18,7 +18,7 @@
 //! sees discrete steps (with the live log underneath) instead of one bar.
 //!
 //! Cross-platform note: `kova update` already handles macOS/Linux (git/pip).
-//! The only OS-specific bits here are the venv shim path (resolve_hermes) and
+//! The only OS-specific bits here are the venv shim path (resolve_kova) and
 //! the no-window creation flag — both already cfg-gated. Keep new logic
 //! OS-agnostic so the mac/linux port stays "fill in the paths".
 
@@ -256,7 +256,7 @@ async fn run_update(app: AppHandle) -> Result<()> {
     // Mutual exclusion (#50238): publish an "update in progress" marker for the
     // entire duration of this update. A desktop instance the user relaunches
     // mid-update consults this before spawning its own local backend — without
-    // it, that backend re-locks the venv shim, our `force_kill_other_hermes`
+    // it, that backend re-locks the venv shim, our `force_kill_other_kova`
     // straggler-cleanup kills it, and the relaunch/kill cycle loops. The guard
     // removes the marker on every exit path (incl. early returns / panics).
     //
@@ -302,7 +302,7 @@ async fn run_update(app: AppHandle) -> Result<()> {
         None
     };
 
-    let kova = resolve_hermes(&install_root).ok_or_else(|| {
+    let kova = resolve_kova(&install_root).ok_or_else(|| {
         let msg = format!(
             "Could not find the kova CLI under {}. Is Kova installed? \
              Re-run the installer to repair the install.",
@@ -609,7 +609,7 @@ async fn run_update(app: AppHandle) -> Result<()> {
             );
         }
     } else if let Err(err) =
-        crate::bootstrap::launch_hermes_desktop(app.clone(), install_root.to_string_lossy().into_owned()).await
+        crate::bootstrap::launch_kova_desktop(app.clone(), install_root.to_string_lossy().into_owned()).await
     {
         // Launch failed: don't hard-fail the update (it succeeded); surface a
         // log line so the success screen can still tell the user to launch
@@ -674,7 +674,7 @@ pub(crate) async fn wait_for_install_locks_free(install_root: &Path, app: &AppHa
                     format_locked_paths(&locked)
                 ),
             );
-            force_kill_other_hermes();
+            force_kill_other_kova();
             tokio::time::sleep(Duration::from_millis(800)).await;
             let locked_after_kill = locked_paths(&lock_targets);
             if locked_after_kill.is_empty() {
@@ -702,7 +702,7 @@ pub(crate) async fn wait_for_install_locks_free(install_root: &Path, app: &AppHa
 }
 
 fn install_lock_probe_paths(install_root: &Path) -> Vec<PathBuf> {
-    let mut paths = vec![venv_hermes(install_root)];
+    let mut paths = vec![venv_kova(install_root)];
     paths.extend(desktop_app_payload_paths(install_root));
     paths
 }
@@ -741,12 +741,12 @@ fn format_locked_paths(paths: &[PathBuf]) -> String {
 /// Safe w.r.t. our own update child: this runs inside the install-lock wait,
 /// which completes BEFORE we spawn `venv\Scripts\kova.exe update`. And a
 /// desktop the user relaunches mid-update will NOT have spawned a backend —
-/// `startHermes()` in the desktop gates local-backend startup on our
+/// `startKova()` in the desktop gates local-backend startup on our
 /// update-in-progress marker and parks until we finish (#50238). So the only
 /// kova.exe images here are stragglers from the old desktop — exactly what
 /// we want gone. (`/FI PID ne <self>` also spares this Tauri process, though it
 /// isn't named kova.exe.)
-fn force_kill_other_hermes() {
+fn force_kill_other_kova() {
     if !cfg!(target_os = "windows") {
         return;
     }
@@ -859,7 +859,7 @@ struct CmdResult {
 }
 
 /// Path to the venv kova shim under an install root, regardless of existence.
-fn venv_hermes(install_root: &Path) -> PathBuf {
+fn venv_kova(install_root: &Path) -> PathBuf {
     if cfg!(target_os = "windows") {
         install_root.join("venv").join("Scripts").join("kova.exe")
     } else {
@@ -869,8 +869,8 @@ fn venv_hermes(install_root: &Path) -> PathBuf {
 
 /// Resolve the kova CLI to drive. Prefer the venv shim in the install we
 /// just updated; fall back to `kova` on PATH.
-fn resolve_hermes(install_root: &Path) -> Option<PathBuf> {
-    let shim = venv_hermes(install_root);
+fn resolve_kova(install_root: &Path) -> Option<PathBuf> {
+    let shim = venv_kova(install_root);
     if shim.exists() {
         return Some(shim);
     }
@@ -987,7 +987,7 @@ async fn install_macos_app_update(
         ));
     }
 
-    let rebuilt_app = crate::bootstrap::resolve_hermes_desktop_app(install_root).ok_or_else(|| {
+    let rebuilt_app = crate::bootstrap::resolve_kova_desktop_app(install_root).ok_or_else(|| {
         anyhow!(
             "desktop rebuild succeeded but no Kova.app was found under {}",
             install_root.join("apps").join("desktop").join("release").display()
@@ -1213,9 +1213,9 @@ mod tests {
     use super::*;
 
     #[test]
-    fn venv_hermes_is_under_install_root() {
+    fn venv_kova_is_under_install_root() {
         let root = Path::new("/x/kova-agent");
-        let shim = venv_hermes(root);
+        let shim = venv_kova(root);
         assert!(shim.starts_with(root));
         assert!(shim.to_string_lossy().contains("venv"));
     }
@@ -1252,7 +1252,7 @@ mod tests {
         let probes = install_lock_probe_paths(root);
 
         assert!(
-            probes.iter().any(|p| p == &venv_hermes(root)),
+            probes.iter().any(|p| p == &venv_kova(root)),
             "venv shim remains part of the update lock probe"
         );
         assert!(
@@ -1376,7 +1376,7 @@ mod tests {
 
     #[test]
     fn acquire_adopts_a_marker_prewritten_with_our_own_pid() {
-        // #74761: desktop writeUpdateMarker(hermesHome, child.pid) races ahead
+        // #74761: desktop writeUpdateMarker(kovaHome, child.pid) races ahead
         // of UpdateMarkerGuard::acquire. The marker names US; refusing it made
         // every in-app desktop update loop forever. Adopt it without resetting
         // the holder age, so a wedged updater still reaches the stale ceiling.

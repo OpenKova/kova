@@ -1,12 +1,12 @@
 //! Filesystem paths + logging setup.
 //!
-//! Mirrors `kova_constants.get_hermes_home()` from the Python CLI:
+//! Mirrors `kova_constants.get_kova_home()` from the Python CLI:
 //!   Windows: %LOCALAPPDATA%\kova
 //!   macOS:   ~/.kova
 //!   Linux:   ~/.kova  (override via $KOVA_HOME)
 //!
-//! NOTE (macOS): Python's get_hermes_home(), scripts/install.sh, and the
-//! Electron desktop's resolveHermesHome() ALL use ~/.kova on macOS — there
+//! NOTE (macOS): Python's get_kova_home(), scripts/install.sh, and the
+//! Electron desktop's resolveKovaHome() ALL use ~/.kova on macOS — there
 //! is no ~/Library/Application Support branch anywhere else. An earlier
 //! version of this file used Application Support, which drifted from every
 //! other component: the installer wrote the install to one dir and the
@@ -31,14 +31,14 @@ pub fn kova_home() -> PathBuf {
 
     #[cfg(target_os = "windows")]
     {
-        // %LOCALAPPDATA%\kova — matches scripts/install.ps1's $HermesHome.
+        // %LOCALAPPDATA%\kova — matches scripts/install.ps1's $KovaHome.
         if let Some(local_app_data) = dirs::data_local_dir() {
             return local_app_data.join("kova");
         }
     }
 
-    // macOS + Linux + fallback: ~/.kova (matches Python get_hermes_home(),
-    // install.sh, and the Electron desktop's resolveHermesHome()).
+    // macOS + Linux + fallback: ~/.kova (matches Python get_kova_home(),
+    // install.sh, and the Electron desktop's resolveKovaHome()).
     if let Some(home) = dirs::home_dir() {
         return home.join(".kova");
     }
@@ -80,7 +80,7 @@ pub fn installer_dest() -> PathBuf {
 /// Marker the updater writes for the duration of an in-app update and removes
 /// when it finishes (see update.rs `UpdateMarkerGuard`). A freshly-launched
 /// desktop checks this before spawning its own local backend: spawning one
-/// mid-update re-locks the venv shim and triggers `force_kill_other_hermes`,
+/// mid-update re-locks the venv shim and triggers `force_kill_other_kova`,
 /// which then kills that legitimate backend in a respawn loop (#50238).
 ///
 /// Lives directly under KOVA_HOME (same rationale as `installer_dest`) so the
@@ -104,7 +104,7 @@ pub fn update_in_progress_marker() -> PathBuf {
 /// so an installer-protocol change can strand the whole installed base on a
 /// binary that predates it (see `restage_from_checkout`, which repairs this
 /// from the freshly-updated checkout).
-pub fn copy_self_to_hermes_home() -> std::io::Result<()> {
+pub fn copy_self_to_kova_home() -> std::io::Result<()> {
     let src = std::env::current_exe()?;
     let dest = installer_dest();
 
@@ -157,8 +157,8 @@ fn repair_macos_installer_helper(_path: &Path) {}
 
 /// Where the bootstrap-complete marker lives (existence-only for the Rust
 /// installer fast path; JSON schema-checked by the Electron app). Per main.ts:
-///   const BOOTSTRAP_COMPLETE_MARKER = path.join(ACTIVE_HERMES_ROOT, '.kova-bootstrap-complete')
-/// We don't always know ACTIVE_HERMES_ROOT until install.ps1 reports it, so
+///   const BOOTSTRAP_COMPLETE_MARKER = path.join(ACTIVE_KOVA_ROOT, '.kova-bootstrap-complete')
+/// We don't always know ACTIVE_KOVA_ROOT until install.ps1 reports it, so
 /// this is a probe helper, not a definitive path.
 pub fn likely_bootstrap_marker(install_root: &Path) -> PathBuf {
     install_root.join(".kova-bootstrap-complete")
@@ -202,7 +202,7 @@ pub fn get_log_path() -> String {
 }
 
 #[tauri::command]
-pub fn get_hermes_home() -> String {
+pub fn get_kova_home() -> String {
     kova_home().to_string_lossy().into_owned()
 }
 

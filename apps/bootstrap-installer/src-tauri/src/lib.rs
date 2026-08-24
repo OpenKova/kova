@@ -124,7 +124,7 @@ pub fn run() {
             // its existing behavior (Windows users relaunch via the Start
             // Menu/Desktop "Kova" shortcuts that install.ps1 creates, and a
             // reliable detached relaunch there needs the DETACHED_PROCESS +
-            // startup-grace handling used by launch_hermes_desktop — out of
+            // startup-grace handling used by launch_kova_desktop — out of
             // scope here). So this is a pure no-op on non-macOS.
             //
             // `--reinstall`/`--repair` opts out so a broken install can be
@@ -135,7 +135,7 @@ pub fn run() {
                     match bootstrap::spawn_installed_desktop(&install_root) {
                         Ok(()) => {
                             // Brief grace so the spawned app is registered
-                            // before we exit (mirrors launch_hermes_desktop).
+                            // before we exit (mirrors launch_kova_desktop).
                             std::thread::sleep(std::time::Duration::from_millis(200));
                             tracing::info!(
                                 "kova already installed — relaunched desktop; exiting installer"
@@ -175,10 +175,10 @@ pub fn run() {
             // Update lifecycle
             update::start_update,
             // Hand-off
-            bootstrap::launch_hermes_desktop,
+            bootstrap::launch_kova_desktop,
             // Diagnostics
             paths::get_log_path,
-            paths::get_hermes_home,
+            paths::get_kova_home,
             paths::open_log_dir,
         ])
         .run(tauri::generate_context!())
