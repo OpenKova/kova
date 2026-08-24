@@ -1,0 +1,7 @@
+[console_scripts]
+kova = kova_cli.main:main
+kova-acp = acp_adapter.entry:main
+kova-agent = run_agent:main
+kova = kova_cli.main:main
+kova-acp = acp_adapter.entry:main
+kova-agent = run_agent:main

@@ -1,0 +1,111 @@
+baseline: 12/13 chunks — resuming runner
+
+$ "C:\Users\chira\kova-agent\.venv\Scripts\python.exe" "C:\Users\chira\kova-agent\tools\rebr
+[skip] tests/acp_adapter (done)
+[skip] tests/agent (done)
+[skip] tests/cron (done)
+[skip] tests/gateway (done)
+[skip] tests/hermes_cli (done)
+[skip] tests/honcho_plugin (done)
+[skip] tests/integration (done)
+[skip] tests/plugins (done)
+[skip] tests/tools (done)
+[skip] tests/ui_tui (done)
+[skip] tests/web (done)
+[run ] tests ...
+       -> OK
+all chunks attempted in 574s; merge next:
+merged -> C:\Users\chira\kova-agent\tools\rebrand\baseline_junit.xml
+tests=29710 failures=519 errors=4 skipped=475
+
+BASELINE COMPLETE.
+
+$ "C:\Users\chira\kova-agent\.venv\Scripts\python.exe" "C:\Users\chira\kova-agent\tools\rebr
+bootstrap: KOVA_* alias seeded
+constants: kova default home + migration installed
+test: migration tests added
+[APPLY] layer=[1] files_changed=3004 in 93.3s
+  word_cap       12779
+  config_dir     5792
+  brand_full     1644
+  org_name       259
+  service_label  234
+  url_scheme     71
+  app_id         8
+  tunnel_port    1
+  url_map        0
+report -> C:\Users\chira\kova-agent\tools\rebrand\last_run.json
+engine layer1: OK
+ 
+
+$ "C:\Users\chira\kova-agent\.venv\Scripts\python.exe" -m pytest tests/test_kova_home_migrat
+L1 GATE: Local/kova') == (WindowsPath('C:/Users/chira') / '.kova')
+     +  where WindowsPath('C:/Users/chira') = home()
+     +    where home = Path.home
+C:\Users\chira\kova-agent\tests\hermes_cli\test_config.py:39: AssertionError: assert WindowsPath('C:/Users/chira/AppData/Local/kova') == (WindowsPath('C:/Users/chira') / '.kova')
+=========================== short test summary info ===========================
+FAILED tests/test_kova_home_migration.py::test_explicit_env_var_disables_default_migration
+FAILED tests/hermes_cli/test_config.py::TestGetHermesHome::test_default_path
+2 failed, 81 passed in 7.03s
+
+
+$ git add -A && git commit -m "feat(surface): Kova branding, ~/.kova home + Hermes migration
+
+$ "C:\Users\chira\kova-agent\.venv\Scripts\python.exe" "C:\Users\chira\kova-agent\tools\rebr
+$ "C:\Users\chira\kova-agent\.venv\Scripts\python.exe" tools/rebrand/ren
+  [APPLY] layer=[2] files_changed=4940 in 54.8s
+  modules        41916
+  word_lower     25709
+  env_vars       11756
+  word_upper     86
+  url_map        0
+report -> C:\Users\chira\kova-agent\tools\rebr
+$ git mv "hermes_cli" "kova_cli"
+  
+$ git mv "setup-hermes.sh" "setup-kova.sh"
+  
+$ git mv "hermes_constants.py" "kova_constants.py"
+  
+$ git mv "hermes_bootstrap.py" "kova_bootstrap.py"
+  
+$ git mv "hermes_logging.py" "kova_logging.py"
+  
+$ git mv "hermes_state.py" "kova_state.py"
+  
+$ git mv "hermes_state_common.py" "kova_state_common.py"
+  
+$ git mv "hermes_state_portability.py" "kova_state_portability.py"
+  
+$ git mv "hermes_state_schema.py" "kova_state_schema.py"
+  
+$ git mv "hermes_state_search.py" "kova_state_search.py"
+  
+$ git mv "hermes_time.py" "kova_time.py"
+  
+$ git mv hermes kova_pkg
+  
+hermes/ -> kova_pkg/ renamed
+shim: kova_cli already primary; ensuring shim exists
+shim written: C:\Users\chira\kova-agent\hermes_cli\__init__.py
+pyproject: [project.scripts] rewritten canonically
+$ "C:\Users\chira\kova-agent\.venv\Scripts\python.exe" -m pip install -q
+  
+ 
+
+$ "C:\Users\chira\kova-agent\.venv\Scripts\python.exe" -m pytest tests/hermes_cli tests/tool
+L2 GATE: st\dsession.py", line 163, in loop_once
+INTERNALERROR>     call(**kwargs)
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\xdist\dsession.py", line 217, in worker_workerfinished
+INTERNALERROR>     assert not crashitem, (crashitem, node)
+INTERNALERROR> AssertionError: ('tests/tools/test_browser_npx_warmup.py::test_runs_in_its_own_process_group_on_posix', <WorkerController gw0>)
+INTERNALERROR> assert not 'tests/tools/test_browser_npx_warmup.py::test_runs_in_its_own_process_group_on_posix'
+
+422 failed, 4948 passed, 130 skipped, 15 warnings, 119 errors in 365.56s (0:06:05)
+
+
+$ git add -A && git commit -m "refactor!: internals hermes->kova (compat shims kept)"
+
+$ "C:\Users\chira\kova-agent\.venv\Scripts\python.exe" "C:\Users\chira\kova-agent\tools\rebr
+
+PIPELINE DONE — full suite verification next.
+PIPELINE EXIT: 0

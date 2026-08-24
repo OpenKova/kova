@@ -1,0 +1,215 @@
+baseline : 29710 tests, 522 bad
+this run : 8968 tests, 413 bad
+
+NEWLY BROKEN (225):
+  ✗ tests.kova_cli.test_cmd_update.TestCmdUpdateBranchFallback#test_fork_upstream_sync_that_moves_head_runs_post_update_steps
+      assert 2 == 0
+ +  where 2 = SystemExit(2).code
+ +    where SystemExit(2) = <ExceptionInfo SystemExit(2) tblen=3>.value
+  ✗ tests.kova_cli.test_cmd_update.TestCmdUpdateBranchFallback#test_update_on_fork_checks_upstream_when_origin_up_to_date
+      SystemExit: 2
+  ✗ tests.kova_cli.test_cmd_update.TestCmdUpdateBranchFlag#test_branch_flag_fails_when_branch_missing_everywhere
+      assert 2 == 1
+ +  where 2 = SystemExit(2).code
+ +    where SystemExit(2) = <ExceptionInfo SystemExit(2) tblen=3>.value
+  ✗ tests.kova_cli.test_cmd_update.TestCmdUpdateBranchFlag#test_branch_flag_pulls_against_named_branch
+      SystemExit: 2
+  ✗ tests.kova_cli.test_cmd_update.TestCmdUpdateMigrationPrompt#test_version_bump_only_applies_silently_without_prompt
+      SystemExit: 2
+  ✗ tests.kova_cli.test_cmd_update.TestCmdUpdateMigrationPrompt#test_version_bump_only_surfaces_migration_resets
+      SystemExit: 2
+  ✗ tests.kova_cli.test_cmd_update.TestCmdUpdateProfileSkillSync#test_active_profile_included_in_skill_sync
+      SystemExit: 2
+  ✗ tests.kova_cli.test_cmd_update.TestCmdUpdateProfileSkillSync#test_single_profile_default_is_synced
+      SystemExit: 2
+  ✗ tests.kova_cli.test_deferred_platform_client_tools.TestA2AClientToolsInCliProcess#test_platform_bundle_includes_the_client_tools
+      AssertionError: assert False
+ +  where False = <built-in method issubset of set object at 0x0000021567F8B920>(set())
+ + 
+  ✗ tests.kova_cli.test_desktop_lifecycle_windows_live#test_live_supervised_serve_suppresses_cold_start
+      AssertionError: assert True is False
+ +  where True = <function _desktop_owns_gateway_lifecycle at 0x0000021566959620>()
+  ✗ tests.kova_cli.test_gateway_proc_fallback.TestGetServicePidsAllProfiles#test_all_profiles_enumerates_all_gateway_labels
+      assert {123, 456} == {123, 456, 999}
+  
+  Extra items in the right set:
+  #x1B[0m#x1B[94m999#x1B[39;49;00m#x1B[90m#x1B[3
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestCronCreateLifecycleBlock#test_block_script_with_lifecycle_command
+      assert 0 == 1
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestCronCreateLifecycleBlockExtra#test_cron_nested_wrapper_script_is_scanned
+      assert 0 == 1
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestGatewayLifecyclePattern#test_hermes_gateway_commands[hermes gateway restart]
+      AssertionError: Should match: 'hermes gateway restart'
+assert False
+ +  where False = _contains_gateway_lifecycle_comman
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestGatewayLifecyclePattern#test_launchctl_submit_bootstrap_commands[launchctl bootstrap gui/501 ~/Library/LaunchAgents/in.neuralstudio.kova.gateway.restart-once.plist]
+      AssertionError: Should match: 'launchctl bootstrap gui/501 ~/Library/LaunchAgents/in.neuralstudio.kova.gateway.restart-o
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestGatewayLifecyclePattern#test_launchctl_submit_bootstrap_commands[launchctl submit -l in.neuralstudio.kova.gateway-hard-restart-no-photon-notice -- /bin/sh ~/.kova/scripts/hard_restart_gateway_no_photon_notice.sh]
+      AssertionError: Should match: 'launchctl submit -l in.neuralstudio.kova.gateway-hard-restart-no-photon-notice -- /bin/sh
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestGatewayLifecyclePattern#test_launchctl_submit_bootstrap_commands[launchctl submit -l kova-gateway-restart-helper -- /bin/sh helper.sh]
+      AssertionError: Should match: 'launchctl submit -l kova-gateway-restart-helper -- /bin/sh helper.sh'
+assert False
+ +  wh
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestGatewayLifecyclePattern#test_launchctl_submit_bootstrap_commands[launchctl submit \\\n  -l in.neuralstudio.kova.gateway-hard-restart-no-photon-notice \\\n  -- /bin/sh ~/.kova/scripts/hard_restart_gateway_no_photon_notice.sh]
+      AssertionError: Should match: 'launchctl submit \\\n  -l in.neuralstudio.kova.gateway-hard-restart-no-photon-notice \\\n
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardDataArgumentExemption#test_command_position_lifecycle_still_blocked[grep "$(systemctl restart kova-gateway)" f]
+      assert False is True
+ +  where False = _scan('grep "$(systemctl restart kova-gateway)" f')
+ +    where _scan = <tests.ko
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardDataArgumentExemption#test_command_position_lifecycle_still_blocked[grep 'restart' log; systemctl restart kova-gateway]
+      assert False is True
+ +  where False = _scan("grep 'restart' log; systemctl restart kova-gateway")
+ +    where _scan = <
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardDataArgumentExemption#test_command_position_lifecycle_still_blocked[grep 'systemctl restart kova-gateway' cmds.txt | sh]
+      assert False is True
+ +  where False = _scan("grep 'systemctl restart kova-gateway' cmds.txt | sh")
+ +    where _scan = 
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardDataArgumentExemption#test_command_position_lifecycle_still_blocked[grep gateway f | xargs systemctl restart kova-gateway]
+      AssertionError: assert False is True
+ +  where False = _scan('grep gateway f | xargs systemctl restart kova-gateway')
+ +
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardDataArgumentExemption#test_command_position_lifecycle_still_blocked[psql -c "\\! systemctl restart kova-gateway"]
+      assert False is True
+ +  where False = _scan('psql -c "\\! systemctl restart kova-gateway"')
+ +    where _scan = <tests.
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardDataArgumentExemption#test_command_position_lifecycle_still_blocked[sudo systemctl stop kova-gateway]
+      AssertionError: assert False is True
+ +  where False = _scan('sudo systemctl stop kova-gateway')
+ +    where _scan = <te
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardModule#test_binary_script_does_not_silently_bypass
+      Failed: DID NOT RAISE GatewayLifecycleBlocked
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardModule#test_relative_script_resolved_under_scripts_dir
+      Failed: DID NOT RAISE GatewayLifecycleBlocked
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardModule#test_script_with_command_raises
+      Failed: DID NOT RAISE GatewayLifecycleBlocked
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestLifecycleGuardModule#test_shell_script_reference_walk_still_works
+      Failed: DID NOT RAISE GatewayLifecycleBlocked
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestTerminalToolGatewayLifecycleGuard#test_blocks_lifecycle_commands_inside_gateway[launchctl kickstart gui/501/in.neuralstudio.kova.gateway]
+      assert -1 == 1
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestTerminalToolGatewayLifecycleGuard#test_blocks_lifecycle_commands_inside_gateway[pkill -f kova.*gateway]
+      assert -1 == 1
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestTerminalToolGatewayLifecycleGuard#test_blocks_lifecycle_commands_inside_gateway[systemctl --user restart kova-gateway]
+      assert -1 == 1
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestTerminalToolGatewayLifecycleGuard#test_blocks_lifecycle_commands_inside_gateway[systemctl restart kova-gateway]
+      assert -1 == 1
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestTerminalToolGatewayLifecycleGuard#test_blocks_lifecycle_commands_inside_gateway[systemctl stop kova-gateway.service]
+      assert -1 == 1
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestTerminalToolGatewayLifecycleGuard#test_force_true_cannot_bypass_block
+      assert -1 == 1
+  ✗ tests.kova_cli.test_gateway_restart_loop.TestTerminalToolGatewayLifecycleGuard#test_relative_script_uses_live_session_cwd
+      assert -1 == 1
+  ✗ tests.kova_cli.test_kanban_db#test_connect_works_when_wal_is_silently_refused
+      AssertionError: Expected a kanban.db ERROR, got: []
+assert 0 >= 1
+ +  where 0 = len([])
+  ✗ tests.kova_cli.test_kanban_swarm#test_create_swarm_graph_is_atomic_and_rolls_back_partial_build
+      Failed: DID NOT RAISE RuntimeError
+  ✗ tests.kova_cli.test_kanban_task_updated_hook#test_assign_fires_updated_with_changed_fields
+      assert 0 == 1
+ +  where 0 = len([])
+  ✗ tests.kova_cli.test_kanban_worker_lifecycle_hooks#test_crash_reclaim_fires_worker_exited
+      assert 0 == 1
+ +  where 0 = len([])
+  ✗ tests.kova_cli.test_kanban_worker_lifecycle_hooks#test_dispatch_spawn_fires_worker_spawned
+      assert 0 == 1
+ +  where 0 = len([])
+  ✗ tests.kova_cli.test_kanban_worker_lifecycle_hooks#test_stale_claim_reclaim_fires_hook
+      assert 0 == 1
+ +  where 0 = len([])
+  ✗ tests.kova_cli.test_kanban_write_guard#test_connect_raises_for_explicit_db_path_under_real_root
+      Failed: DID NOT RAISE RuntimeError
+  ✗ tests.kova_cli.test_kanban_write_guard#test_connect_raises_when_kanban_home_is_real_root
+      Failed: DID NOT RAISE RuntimeError
+  ✗ tests.kova_cli.test_launcher#test_launcher_delegates_to_argparse_entrypoint
+      FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\kova-agent\\kova'
+  ✗ tests.kova_cli.test_lazy_command_exports#test_lazy_reexports_accept_monkeypatch
+      AssertionError: assert <function _cmd_update_impl at 0x00000240E694C220> is <object object at 0x00000240D38CD140>
+ +  wh
+  ✗ tests.kova_cli.test_lazy_refresh_venv_repair#test_cmd_update_captures_and_propagates_pre_rebuild_snapshot
+      SystemExit: 2
+  ✗ tests.kova_cli.test_lazy_refresh_venv_repair#test_refresh_repairs_venv_after_lazy_failure
+      assert False is True
+  ✗ tests.kova_cli.test_lazy_refresh_venv_repair#test_restore_active_tool_dependencies_uses_static_allowlist
+      AssertionError: assert [] == [(['uv', 'pip...'/tmp/venv'})]
+  
+  Right contains one more item: #x1B[0m([#x1B[33m'#x1B[39
+  ✗ tests.kova_cli.test_lifecycle#test_finalize_session_closes_core_before_plugin_export
+      AssertionError: assert ['core'] == ['builtin', 'core', 'plugin']
+  
+  At index 0 diff: #x1B[0m#x1B[33m'#x1B[39;49;00m#x1
+  ✗ tests.kova_cli.test_lifecycle#test_invoke_hook_notifies_builtin_observers_before_plugins
+      AssertionError: assert [] == ['ok']
+  
+  Right contains one more item: #x1B[0m#x1B[33m'#x1B[39;49;00m#x1B[33mok#x1B[39;4
+  ✗ tests.kova_cli.test_main_model_custom_provider_normalization#test_custom_provider_name_canonicalizes_to_durable_slug
+      AssertionError: assert ('openrouter'...ndor/model-a') == ('custom:us-a...ndor/model-a')
+  
+  At index 0 diff: #x1B[0m#x1
+  ✗ tests.kova_cli.test_mcp_discovery_timing#test_init_agent_defaults_to_interactive
+      AssertionError: assert None is False
+ +  where None = <built-in method get of dict object at 0x00000240E740C8C0>('single
+  ✗ tests.kova_cli.test_mcp_discovery_timing#test_init_agent_forwards_single_query_flag
+      AssertionError: assert None is True
+ +  where None = <built-in method get of dict object at 0x00000240E740C8C0>('single_
+  ✗ tests.kova_cli.test_mcp_startup#test_prepare_agent_startup_backgrounds_blocking_mcp_for_chat
+      assert 0.23399999999674037 < 0.2
+  ✗ tests.kova_cli.test_mcp_tools_config#test_disabling_tool_writes_include_list
+      AssertionError: Expected 'save_config' to have been called once. Called 0 times.
+  ✗ tests.kova_cli.test_plugin_runtime_disable_gate.TestBundledPluginAssetGate#test_bundled_asset_returns_404_when_disabled
+      AssertionError: Disabled bundled plugin asset must return 404
+assert 200 == 404
+ +  where 200 = <Response [200 OK]>.stat
+  ✗ tests.kova_cli.test_plugins_cmd.TestGitPullPluginDirAutostash#test_clean_checkout_unchanged_behavior
+      assert False is True
+  ✗ tests.kova_cli.test_plugins_cmd.TestGitPullPluginDirAutostash#test_conflicting_local_edit_is_preserved_in_stash
+      assert False is True
+  ✗ tests.kova_cli.test_plugins_cmd.TestGitPullPluginDirAutostash#test_dirty_checkout_pulls_and_reapplies_local_edit
+      assert False is True
+  ✗ tests.kova_cli.test_plugins_cmd.TestGitPullPluginDirAutostash#test_untracked_local_file_survives_update
+      assert False is True
+
+VANISHED FROM COLLECTION (22889):
+  ? #tests.agent.test_pydantic_dump_warning_leak
+  ? #tests.cli.test_termios_drift_heal
+  ? #tests.gateway.test_discord_voice_mixer
+  ? #tests.gateway.test_matrix_voice
+  ? #tests.honcho_plugin.test_client_identity_isolation
+  ? #tests.integration.test_daytona_terminal
+  ? #tests.integration.test_voice_channel_flow
+  ? #tests.monitoring.test_otlp_exporter
+  ? #tests.plugins.memory.test_holographic_retrieval
+  ? #tests.plugins.test_holographic_vector_storage
+  ? #tests.test_telegram_polling_progress_ptb
+  ? tests.acp.test_approval_isolation.TestAcpExecAskGate#test_interactive_env_var_routes_to_callback
+  ? tests.acp.test_approval_isolation.TestThreadLocalApprovalCallback#test_callback_not_visible_in_different_thread
+  ? tests.acp.test_approval_isolation.TestThreadLocalApprovalCallback#test_main_thread_callback_not_leaked_to_worker
+  ? tests.acp.test_approval_isolation.TestThreadLocalApprovalCallback#test_set_and_get_in_same_thread
+  ? tests.acp.test_approval_isolation.TestThreadLocalApprovalCallback#test_sudo_password_cache_does_not_leak_across_threads
+  ? tests.acp.test_auth.TestBuildAuthMethods#test_build_auth_methods_returns_provider_and_terminal_when_configured
+  ? tests.acp.test_auth.TestDetectProvider#test_detect_openrouter
+  ? tests.acp.test_auth.TestHasProvider#test_has_provider_with_resolved_runtime
+  ? tests.acp.test_edit_approval#test_acp_permission_tool_call_uses_edit_kind_and_diff_content
+  ? tests.acp.test_edit_approval#test_patch_replace_rejection_does_not_mutate
+  ? tests.acp.test_edit_approval#test_requester_exception_denies_and_does_not_mutate
+  ? tests.acp.test_edit_approval#test_workspace_auto_approval_allows_workspace_and_tmp_but_not_sensitive
+  ? tests.acp.test_entry#test_main_enables_unstable_protocol
+  ? tests.acp.test_entry#test_main_setup_browser_propagates_browser_failure
+  ? tests.acp.test_entry#test_main_setup_offers_browser_install_when_tty
+  ? tests.acp.test_entry#test_main_skips_configured_mcp_discovery_when_requested
+  ? tests.acp.test_events.TestSendUpdate#test_scheduler_failure_closes_update_coroutine
+  ? tests.acp.test_events.TestStepCallback#test_completes_tracked_tool_calls
+  ? tests.acp.test_events.TestStepCallback#test_result_passed_to_build_tool_complete
+  ? tests.acp.test_events.TestStepCallback#test_todo_completion_emits_native_plan_update_after_tool_completion
+  ? tests.acp.test_events.TestStepCallback#test_tool_progress_captures_snapshot_metadata
+  ? tests.acp.test_events.TestToolProgressCallback#test_duplicate_same_name_tool_calls_use_fifo_ids
+  ? tests.acp.test_events.TestToolProgressCallback#test_emits_tool_call_start
+  ? tests.acp.test_mcp_e2e.TestMcpRegistrationE2E#test_patch_mode_tool_start_defers_diff_to_edit_approval_prompt
+  ? tests.acp.test_mcp_e2e.TestMcpRegistrationE2E#test_prompt_with_tool_calls_emits_acp_events
+  ? tests.acp.test_mcp_e2e.TestMcpRegistrationE2E#test_session_with_mcp_servers_registers_tools
+  ? tests.acp.test_mcp_e2e.TestMcpSanitizationE2E#test_slashed_server_name_registers_cleanly
+  ? tests.acp.test_mcp_e2e.TestSessionLifecycleMcpE2E#test_fork_session_registers_mcp
+  ? tests.acp.test_mcp_e2e.TestSessionLifecycleMcpE2E#test_load_session_registers_mcp
+
+(also: 334 baseline-bad now passing)
+
+GATE: FAIL ❌

@@ -1,0 +1,8 @@
+.....................F....F............................................. [ 75%]
+....................F...                                                 [100%]
+=========================== short test summary info ===========================
+FAILED tests/kova_cli/test_kanban_db.py::test_rate_limit_exit_requeues_without_counting_failure
+FAILED tests/kova_cli/test_kanban_db.py::test_worktree_workspace_explicit_target_materializes_linked_worktree
+FAILED tests/gateway/test_telegram_mention_boundaries.py::TestCaseInsensitivity::test_mixed_case_mention
+3 failed, 93 passed in 33.44s
+EXIT: 1

@@ -1,0 +1,2040 @@
+bringing up nodes...
+bringing up nodes...
+
+........................................................................ [  0%]
+........................................................................ [  0%]
+.............F..F...F........F.......................................... [  0%]
+........................................................................ [  0%]
+........................................................................ [  0%]
+........................................................................ [  1%]
+.............................F.......................................... [  1%]
+........................................................................ [  1%]
+........................--- Logging error ---
+..Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 454, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\agent\redact.py", line 1427, in format
+    return redact_sensitive_text(original)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\tests\agent\test_trace_upload.py", line 70, in boom
+    raise RuntimeError("redactor unavailable")
+RuntimeError: redactor unavailable
+....Message: 'Trace upload redaction failed; refusing upload'
+Arguments: ()
+.......................................... [  1%]
+..........................F...F.....F................................... [  1%]
+........................................................................ [  2%]
+........................................................................ [  2%]
+........................................................................ [  2%]
+.......................................F................................ [  2%]
+...........................ss........................................... [  2%]
+..s.....s.........s..................................................... [  3%]
+........................................................................ [  3%]
+............ss...........F..........F.....sF............................ [  3%]
+................F...............F.........................F............. [  3%]
+...................................................................F.F.. [  3%]
+........................................................................ [  4%]
+...........................................................F............ [  4%]
+........................................................................ [  4%]
+.............................................F.....F...F...F.....F..F... [  4%]
+...........................................FF...F....................... [  4%]
+........................................................................ [  5%]
+........................................................................ [  5%]
+........................................................................ [  5%]
+........................................................................ [  5%]
+........................................................................ [  5%]
+........................................................................ [  6%]
+......................................................F................. [  6%]
+........................................................................ [  6%]
+.................s...................................................... [  6%]
+........................................................................ [  6%]
+........................................................................ [  6%]
+........................................................................ [  7%]
+........................................................................ [  7%]
+sssssss................................................................. [  7%]
+........................................................................ [  7%]
+........................................................................ [  7%]
+........................................................................ [  8%]
+...............F...F.................................................... [  8%]
+........................................................................ [  8%]
+.........................................sssssssss.s.................... [  8%]
+...............s.........................................F.............. [  8%]
+........................................................................ [  9%]
+........................................................................ [  9%]
+........................................................................ [  9%]
+........................................................................ [  9%]
+.................................................................F...... [  9%]
+........................................................................ [ 10%]
+..........................s.s...........F............................... [ 10%]
+........................................................................ [ 10%]
+......................F.............F..............F....F..F..F.F....... [ 10%]
+.......................................................................F [ 10%]
+.....F...F.............F.............sss.ss............................. [ 11%]
+........................................................................ [ 11%]
+.................................................F..F.F..F..F..F..FF.F.F [ 11%]
+...F....................F..........................F.................... [ 11%]
+........................................................................ [ 11%]
+........................................................................ [ 12%]
+.............................................................F..F....... [ 12%]
+........................................................................ [ 12%]
+.................................................F...................... [ 12%]
+.......................F...F............................................ [ 12%]
+F....................................................................... [ 13%]
+........................................................................ [ 13%]
+.F....F................................................................. [ 13%]
+........................................................................ [ 13%]
+.........F.F..F.F.F..................................................... [ 13%]
+........................................................................ [ 13%]
+........................................................................ [ 14%]
+........................................................................ [ 14%]
+........................................................................ [ 14%]
+........................................................................ [ 14%]
+........................................................................ [ 14%]
+.........F..F.........s..F.............................................. [ 15%]
+........................................................................ [ 15%]
+........................................................................ [ 15%]
+................FF...................F.................................. [ 15%]
+..................................F..................................... [ 15%]
+........................................................................ [ 16%]
+..............................................................sssss.sss. [ 16%]
+.........................................sssss.ssssssssssss.ssssssssssss [ 16%]
+ssssssss.ssssssssssssssssssss........................................... [ 16%]
+........................................................................ [ 16%]
+........................................................................ [ 17%]
+........................................................................ [ 17%]
+........................................................................ [ 17%]
+........................................................................ [ 17%]
+........................................................................ [ 17%]
+........................................................................ [ 18%]
+........................................................................ [ 18%]
+........................................................................ [ 18%]
+........................................F...F........................... [ 18%]
+........................................................................ [ 18%]
+...................F.................................................s.. [ 19%]
+.s..........................s.s......................................... [ 19%]
+........................................................................ [ 19%]
+........................................................................ [ 19%]
+......................sssssssssssssss................................... [ 19%]
+........................................F............................... [ 19%]
+.............................................................F.......... [ 20%]
+..............................................ssss.ssssssssss.sss....... [ 20%]
+........................................................................ [ 20%]
+.......................................................................s [ 20%]
+........................F............F.................................. [ 20%]
+........................................................................ [ 21%]
+........................................................................ [ 21%]
+........................................................................ [ 21%]
+........................................................................ [ 21%]
+........................................................................ [ 21%]
+........................................................................ [ 22%]
+...........................x.........sFF................................ [ 22%]
+........................................................................ [ 22%]
+........................................................................ [ 22%]
+............................F...Fsss.................................... [ 22%]
+........................................................................ [ 23%]
+........................................................................ [ 23%]
+..F..................................................................... [ 23%]
+........................................................................ [ 23%]
+........................................................................ [ 23%]
+...................................F.................................... [ 24%]
+.......F................................................................ [ 24%]
+...............................F...........................F...........F [ 24%]
+...F.F..F....F...F...F...............................s.................. [ 24%]
+......F................................................................. [ 24%]
+........................................................................ [ 25%]
+.............................F.......................................... [ 25%]
+................F.............................ssss...................... [ 25%]
+.........s.............................................................. [ 25%]
+...............F........................................................ [ 25%]
+........................................................................ [ 26%]
+........................................................................ [ 26%]
+........................................................................ [ 26%]
+........................................................................ [ 26%]
+..........................................ss............................ [ 26%]
+..............................F..F...................................... [ 26%]
+...s.............s...................................................... [ 27%]
+........................................................................ [ 27%]
+........................................................................ [ 27%]
+......................................................F................. [ 27%]
+..........................F............................................. [ 27%]
+........................................................................ [ 28%]
+F..F........................F........................................... [ 28%]
+..............................................--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: 'OpenAI client created (%s, shared=%s) %s'
+Arguments: ('chat_completion_stream_request', False, 'thread=Thread-1518 (<lambda>):13204 provider=openai-compat base_url=http://127.0.0.1:56873/v1 model=test-model')
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: 'tool %s completed (%.2fs, %d chars)'
+Arguments: ('todo', 0.02658247947692871, 102)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: 'Pre-call sanitizer: repairing tool_call with empty function.name -> %r (id=%s)'
+Arguments: ('invalid_tool_call', 'call_1')
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: 'Pre-call sanitizer: repairing tool_call with empty function.name -> %r (id=%s)'
+Arguments: ('invalid_tool_call', 'call_1')
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: 'Turn ended: reason=%s model=%s api_calls=%d/%d budget=%d/%d tool_turns=%d last_msg_role=%s response_len=%d session=%s'
+Arguments: ('text_response(finish_reason=stop)', 'test-model', 2, 10, 2, 10, 1, 'assistant', 4, '20260824_001806_536305')
+.......................... [ 28%]
+........................................................................ [ 28%]
+.........................s.............................................. [ 28%]
+........................................................................ [ 29%]
+...............F........................................................ [ 29%]
+.......sss.............................................................. [ 29%]
+....ssss...........F.................................................... [ 29%]
+........................................................................ [ 29%]
+............--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+.
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+........................................................... [ 30%]
+...............................................sssssss.................. [ 30%]
+..Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-brave-free',)
+--- Logging error ---
+......................................................Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-keenable',)
+...........sssss [ 30%]
+ssssss.........................Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+................Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-keenable',)
+......................... [ 30%]
+.........................................................--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+............... [ 30%]
+..........................................Message: "Plugin '%s' tried to register a browser provider that does not inherit from BrowserProvider. Ignoring."
+Arguments: ('browser-browser-use',)
+..........F...........F..F.... [ 31%]
+........................................................................ [ 31%]
+.....................--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+................................................... [ 31%]
+............................................................ss.......... [ 31%]
+....................................................--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+.................... [ 31%]
+................F..............................F..F..F.............FF... [ 32%]
+.F..F..F.........................F...................................... [ 32%]
+...ssssss.......................s...Fssssssss........................... [ 32%]
+.......F......F....F....F.......F............F...F...F....F...F..F...FF. [ 32%]
+....F...F...........F...F..F...........F.............--- Logging error ---
+Traceback (most recent call last):
+.  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: "Plugin '%s' tried to register a browser provider that does not inherit from BrowserProvider. Ignoring."
+Arguments: ('browser-browserbase',)
+s....--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+............. [ 32%]
+..................................Call stack:
+.  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+Call stack:
+.......--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+.............................. [ 32%]
+..............................Call stack:
+.  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+....................................Call stack:
+.  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+.... [ 33%]
+..........F............--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+.....Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-ddgs',)
+.........................Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+................... [ 33%]
+..........Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-ddgs',)
+........x............F.........................F.............. [ 33%]
+......................................................s................. [ 33%]
+..F....F....................................Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-ddgs',)
+.......F.........F...F...F.. [ 33%]
+Fss.......F..........................Call stack:
+.  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-parallel',)
+...............................F.. [ 34%]
+F...F...........F....................................................F.. [ 34%]
+F....................................................................... [ 34%]
+...................................................F.....F............F. [ 34%]
+........................................................................ [ 34%]
+.......................................Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-keenable',)
+--- Logging error ---
+F.....F.....s.....F..F.........F. [ 35%]
+.......................F.......F.F...FF.--- Logging error ---
+.Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-xai',)
+F..F..........F................ [ 35%]
+.....F.................FCall stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+.  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+F...........................--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+...Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+.............Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+... [ 35%]
+.................................F.......................ss.ssss........ [ 35%]
+........F...........Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+Call stack:
+..  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: "Plugin '%s' tried to register a browser provider that does not inherit from BrowserProvider. Ignoring."
+Arguments: ('browser-firecrawl',)
+......--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+........E................................... [ 35%]
+.........--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+.  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+......Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+.........--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+.  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Message: "Plugin '%s' registered image_gen provider: %s"
+Arguments: ('openai', 'openai')
+............--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+.....Message: "Plugin '%s' registered image_gen provider: %s"
+Arguments: ('deepinfra', 'deepinfra')
+................--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+...Message: "Plugin '%s' registered image_gen provider: %s"
+Arguments: ('fal', 'fal')
+...s...... [ 36%]
+..--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+.........--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+...--- Logging error ---
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+....Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-exa',)
+............--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+....--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+.  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+....--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+......Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+..--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+F....................... [ 36%]
+........................................................................ [ 36%]
+.........--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+.
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+.Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+......--- Logging error ---
+.Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: "Plugin '%s' registered video_gen provider: %s"
+Arguments: ('xai', 'xai')
+...--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+......................................--- Logging error ---
+..Traceback (most recent call last):
+.  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Message: "Plugin '%s' registered video_gen provider: %s"
+Arguments: ('fal', 'fal')
+......... [ 36%]
+..........................F....ssss...........s......................... [ 36%]
+........................................................................ [ 37%]
+...F.................................................................... [ 37%]
+....--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+.  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+........Call stack:
+...  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-firecrawl',)
+......F..--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+..Message: "Plugin '%s' tried to register a browser provider that does not inherit from BrowserProvider. Ignoring."
+Arguments: ('browser-browserbase',)
+....--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+......................--- Logging error ---
+..F............... [ 37%]
+.................................Message: "Plugin '%s' registered image_gen provider: %s"
+Arguments: ('deepinfra', 'deepinfra')
+.............Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+....--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+.  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+..Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+................... [ 37%]
+...........Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+..--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+.....--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__agent.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-ddgs',)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 356, in atomic_open
+    file = _open(file_path, "r+", encoding=self.encoding, newline=self.newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 456, in emit
+    self._do_lock()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 607, in _do_lock
+    self._open_lockfile()
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 345, in _open_lockfile
+    self.stream_lock = self.atomic_open(lock_file)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 365, in atomic_open
+    fd = _os_open(file_path, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\chira\\AppData\\Local\\Temp\\kova_e2e_47967_omokb99r\\.kova\\logs\\.__errors.lock'
+Call stack:
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1578, in _monitor
+    self.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\handlers.py", line 1559, in handle
+    handler.handle(record)
+  File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\logging\__init__.py", line 978, in handle
+    self.emit(record)
+  File "C:\Users\chira\kova-agent\kova_logging.py", line 519, in emit
+    super().emit(record)
+  File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\concurrent_log_handler\__init__.py", line 477, in emit
+    self.handleError(record)
+Message: "Plugin '%s' tried to register a web provider that does not inherit from WebSearchProvider. Ignoring."
+Arguments: ('web-ddgs',)
+E....E................................................ [ 37%]
+........................................................................ [ 38%]
+........................................................................ [ 38%]
+.......F....F........F...F.....F...F..F..F..............Fs.............. [ 38%]
+...........FF.F..................F.....F.s..ss....F..FF..FFF..FF..FF..F. [ 38%]
+.....F...F.F..F.F.....F.F....F....F...F.F..F..F..F.F...F.Fsssssssss..F.. [ 38%]
+Fss.ssssss.......................F.....F.......................F....F... [ 39%]
+..F................................................F.................... [ 39%]
+......................................................................F. [ 39%]
+........................................................................ [ 39%]
+.................F...................................................... [ 39%]
+......................................................................ss [ 39%]
+ss........F.....................................F....................... [ 40%]
+.........................................................sssss.......... [ 40%]
+......................................................................F. [ 40%]
+........................................................................ [ 40%]
+..........................F............................................. [ 40%]
+........F...s....s...................................................... [ 41%]
+..................................................F..................... [ 41%]
+........................................................................ [ 41%]
+...................................................s.................F.. [ 41%]
+..................F..................................................... [ 41%]
+..............................s..................F...................... [ 42%]
+........s...s..F..Fssss..F.........................................sssss [ 42%]
+.............s.......................F.F..............F..F..F....F...... [ 42%]
+F.............................................................F...F....F [ 42%]
+...F....F...F...F....................................................... [ 42%]
+.......................................................ss............... [ 43%]
+........................F...F........................................... [ 43%]
+..........................................................F...F.ss..F... [ 43%]
+...F.sF....F...F....F...F....FF..F....F..........................F...... [ 43%]
+.............sssss............s....s........sss..............ss......... [ 43%]
+.................................................F...................... [ 44%]
+................F...................................F................... [ 44%]
+........................................................................ [ 44%]
+.............Fs...................F.s...........F..F....F............... [ 44%]
+....FF..............................................F...F............... [ 44%]
+....................................................F.FF...........s.... [ 45%]
+..............................F.........F..................F............ [ 45%]
+....ss.................................F....F.F........................F [ 45%]
+.FF...F.FF.F...................F.................s..F.......F.....F..... [ 45%]
+...............F........................................................ [ 45%]
+.............................................................F.........F [ 45%]
+...F..F....F...........................F............F................... [ 46%]
+.......................F................................................ [ 46%]
+....F................................................................... [ 46%]
+........................................................................ [ 46%]
+........................................................................ [ 46%]
+.....................................................................F.. [ 47%]
+....s................................................................... [ 47%]
+........................................................................ [ 47%]
+........................................................................ [ 47%]
+........................................................................ [ 47%]
+................F................................s.F...........F........ [ 48%]
+...F........F..........F.......F.........F.......F.........F.......F.... [ 48%]
+...F.................................................................... [ 48%]
+............................F........................................... [ 48%]
+.................................................F...................... [ 48%]
+......F................F...F....F.F...F...........F..........F..s..F.... [ 49%]
+........................................................................ [ 49%]
+.....................................................F.................. [ 49%]
+........................................................................ [ 49%]
+................................................F............FF.FssF.... [ 49%]
+.F.................................................................F.... [ 50%]
+................F.ss...............................F....F.....F......... [ 50%]
+.F...........F...................F................F............F........ [ 50%]
+........................F...F........................................... [ 50%]
+.....................................................................F.F [ 50%]
+......................F...........F..................................... [ 51%]
+........................................................................ [ 51%]
+...F....F............................................................... [ 51%]
+.......F.F.F.F......F.........................................F......... [ 51%]
+......F....F.....F.F..FF...FF.FFF.FF.F.....s.........F....FF............ [ 51%]
+..................................F..................................... [ 52%]
+............F...........FF.FF........................................... [ 52%]
+........................................................................ [ 52%]
+........................................................sss............. [ 52%]
+..............................................F.......F................. [ 52%]
+....................................................ssF................. [ 52%]
+.F...F..F..F..F..........[gw1] node down: Not properly terminated
+F..............................s........................................ [ 53%]
+........................................................................ [ 53%]
+..ss..ss...............................................F................ [ 53%]
+.............................s.......................................... [ 53%]
+...................sF......F..Fsss........F..F.....sssss................ [ 54%]
+........................................................................ [ 54%]
+.......................................s.........................E...... [ 54%]
+E.......E......E.......EF.F.E...........E.........E........E............ [ 54%]
+........................................................................ [ 54%]
+................................F........................sss..F......... [ 54%]
+.....ss..............................................F.................. [ 55%]
+...................F.................................................... [ 55%]
+....................s............................................F...... [ 55%]
+....F.F.............................F.........................F........F [ 55%]
+......................s..........F.....................................F [ 55%]
+...............F........................................................ [ 56%]
+...........................F............................................ [ 56%]
+F..........F...................................F........................ [ 56%]
+..................F.........F......F.................................... [ 56%]
+..F...............................................F..EEEEE.............. [ 56%]
+........................................................................ [ 57%]
+...................................................................F.... [ 57%]
+........................................................................ [ 57%]
+..................F..................................................... [ 57%]
+........................................................................ [ 57%]
+........................................................................ [ 58%]
+..................................................s......ss............. [ 58%]
+........................................................................ [ 58%]
+........................................................................ [ 58%]
+...............F.......................F................................ [ 58%]
+........................................................................ [ 59%]
+..ss.................................................................... [ 59%]
+................................s....................................... [ 59%]
+........................................................................ [ 59%]
+..................................................................F..... [ 59%]
+...................F.................................................... [ 60%]
+........................................................................ [ 60%]
+........................................................................ [ 60%]
+........................................................................ [ 60%]
+........................................................................ [ 60%]
+...............................................................FF....... [ 60%]
+..........................................[gw5] node down: Not properly terminated
+F....................................................................... [ 61%]
+........................................................................ [ 61%]
+........................................................................ [ 61%]
+............................s.s...s...s................................. [ 61%]
+.sssssssssss............................................................ [ 62%]
+.........................................F.............................. [ 62%]
+...............................F....F..........................sssssssss [ 62%]
+ss..............F....................................................... [ 62%]
+........................................................................ [ 62%]
+....................................................s.sssssF............ [ 63%]
+.....................F.............F...ss.........F.F.F................. [ 63%]
+.........................F.............................................. [ 63%]
+F.......................F..............................................F [ 63%]
+...........................................F............................ [ 63%]
+..F.F...........F.........F............................................. [ 64%]
+.................................................F...................... [ 64%]
+.................................F....................F.........FF...... [ 64%]
+..........F............................................................. [ 64%]
+.........F.............................................................. [ 64%]
+..s.......................................................F............. [ 64%]
+........................................................................ [ 65%]
+........................................................................ [ 65%]
+........................................................................ [ 65%]
+........................................................................ [ 65%]
+........................................................................ [ 65%]
+........................................................................ [ 66%]
+........................................................................ [ 66%]
+.........F..............F............................................... [ 66%]
+............................................F........................... [ 66%]
+............................................sssssssss................... [ 66%]
+........................................................................ [ 67%]
+..................F..................................................... [ 67%]
+...........................................F.......F......F.....F.F..... [ 67%]
+.ssssss.........F...F.F........................F........................ [ 67%]
+......sss............................................................... [ 67%]
+.................................F...............F..........F...F....... [ 68%]
+..F..s...........F...................................................... [ 68%]
+.............................................F....................FF.FFF [ 68%]
+F....................................................................... [ 68%]
+........................................................................ [ 68%]
+..............................................................F......... [ 69%]
+.............................................................F.......... [ 69%]
+...F.................................................................... [ 69%]
+...................FF................................................... [ 69%]
+........................................................................ [ 69%]
+......................................s................................. [ 70%]
+........................................................................ [ 70%]
+........................................................................ [ 70%]
+...................s........s........................F.................. [ 70%]
+.............F.............F...........................sssss.sss..F..... [ 70%]
+..............................F......................................... [ 70%]
+.s...........INTERNALERROR> def worker_internal_error(
+INTERNALERROR>         self, node: WorkerController, formatted_error: str
+INTERNALERROR>     ) -> None:
+INTERNALERROR>         """
+INTERNALERROR>         pytest_internalerror() was called on the worker.
+INTERNALERROR>     
+INTERNALERROR>         pytest_internalerror() arguments are an excinfo and an excrepr, which can't
+INTERNALERROR>         be serialized, so we go with a poor man's solution of raising an exception
+INTERNALERROR>         here ourselves using the formatted message.
+INTERNALERROR>         """
+INTERNALERROR>         self._active_nodes.remove(node)
+INTERNALERROR>         try:
+INTERNALERROR> >           assert False, formatted_error
+INTERNALERROR> E           AssertionError: Traceback (most recent call last):
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\main.py", line 330, in wrap_session
+INTERNALERROR> E                 session.exitstatus = doit(config, session) or 0
+INTERNALERROR> E                                      ^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\main.py", line 384, in _main
+INTERNALERROR> E                 config.hook.pytest_runtestloop(session=session)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+INTERNALERROR> E                 return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+INTERNALERROR> E                 return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+INTERNALERROR> E                 raise exception
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\logging.py", line 816, in pytest_runtestloop
+INTERNALERROR> E                 return (yield)  # Run all the tests.
+INTERNALERROR> E                         ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\terminal.py", line 708, in pytest_runtestloop
+INTERNALERROR> E                 result = yield
+INTERNALERROR> E                          ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+INTERNALERROR> E                 res = hook_impl.function(*args)
+INTERNALERROR> E                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\xdist\remote.py", line 206, in pytest_runtestloop
+INTERNALERROR> E                 self.run_one_test()
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\xdist\remote.py", line 227, in run_one_test
+INTERNALERROR> E                 self.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+INTERNALERROR> E                 return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+INTERNALERROR> E                 return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+INTERNALERROR> E                 raise exception
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\warnings.py", line 90, in pytest_runtest_protocol
+INTERNALERROR> E                 return (yield)
+INTERNALERROR> E                         ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\assertion\__init__.py", line 205, in pytest_runtest_protocol
+INTERNALERROR> E                 return (yield)
+INTERNALERROR> E                         ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 53, in run_old_style_hookwrapper
+INTERNALERROR> E                 return result.get_result()
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_result.py", line 103, in get_result
+INTERNALERROR> E                 raise exc.with_traceback(tb)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 38, in run_old_style_hookwrapper
+INTERNALERROR> E                 res = yield
+INTERNALERROR> E                       ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\unittest.py", line 612, in pytest_runtest_protocol
+INTERNALERROR> E                 return (yield)
+INTERNALERROR> E                         ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\faulthandler.py", line 102, in pytest_runtest_protocol
+INTERNALERROR> E                 return (yield)
+INTERNALERROR> E                         ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+INTERNALERROR> E                 res = hook_impl.function(*args)
+INTERNALERROR> E                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\runner.py", line 118, in pytest_runtest_protocol
+INTERNALERROR> E                 runtestprotocol(item, nextitem=nextitem)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\runner.py", line 139, in runtestprotocol
+INTERNALERROR> E                 reports.append(call_and_report(item, "call", log))
+INTERNALERROR> E                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\runner.py", line 254, in call_and_report
+INTERNALERROR> E                 report: TestReport = ihook.pytest_runtest_makereport(item=item, call=call)
+INTERNALERROR> E                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+INTERNALERROR> E                 return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+INTERNALERROR> E                 return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+INTERNALERROR> E                 raise exception
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\tmpdir.py", line 347, in pytest_runtest_makereport
+INTERNALERROR> E                 rep = yield
+INTERNALERROR> E                       ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR> E                 teardown.throw(exception)
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\skipping.py", line 280, in pytest_runtest_makereport
+INTERNALERROR> E                 rep = yield
+INTERNALERROR> E                       ^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+INTERNALERROR> E                 res = hook_impl.function(*args)
+INTERNALERROR> E                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\runner.py", line 385, in pytest_runtest_makereport
+INTERNALERROR> E                 return TestReport.from_item_and_call(item, call)
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\reports.py", line 438, in from_item_and_call
+INTERNALERROR> E                 longrepr = _format_failed_longrepr(item, call, excinfo)
+INTERNALERROR> E                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\reports.py", line 263, in _format_failed_longrepr
+INTERNALERROR> E                 longrepr = item.repr_failure(excinfo)
+INTERNALERROR> E                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\python.py", line 1749, in repr_failure
+INTERNALERROR> E                 return self._repr_failure_py(excinfo, style=style)
+INTERNALERROR> E                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\nodes.py", line 444, in _repr_failure_py
+INTERNALERROR> E                 abspath = Path(os.getcwd()) != self.config.invocation_params.dir
+INTERNALERROR> E                           ^^^^^^^^^^^^^^^^^
+INTERNALERROR> E               File "C:\Users\chira\AppData\Local\kova\hermes-agent\.hermes-runtime\python\generation-1787421594-21304-dfed36d7\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 873, in __new__
+INTERNALERROR> E                 raise NotImplementedError("cannot instantiate %r on your system"
+INTERNALERROR> E             NotImplementedError: cannot instantiate 'PosixPath' on your system
+INTERNALERROR> E           assert False
+INTERNALERROR> 
+INTERNALERROR> .venv\Lib\site-packages\xdist\dsession.py:232: AssertionError
+.............INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\main.py", line 330, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>                          ^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\main.py", line 384, in _main
+INTERNALERROR>     config.hook.pytest_runtestloop(session=session)
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_hooks.py", line 512, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR>            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 167, in _multicall
+INTERNALERROR>     raise exception
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR>     teardown.throw(exception)
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\logging.py", line 816, in pytest_runtestloop
+INTERNALERROR>     return (yield)  # Run all the tests.
+INTERNALERROR>             ^^^^^
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+INTERNALERROR>     teardown.throw(exception)
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\_pytest\terminal.py", line 708, in pytest_runtestloop
+INTERNALERROR>     result = yield
+INTERNALERROR>              ^^^^^
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\pluggy\_callers.py", line 121, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>           ^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\xdist\dsession.py", line 138, in pytest_runtestloop
+INTERNALERROR>     self.loop_once()
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\xdist\dsession.py", line 163, in loop_once
+INTERNALERROR>     call(**kwargs)
+INTERNALERROR>   File "C:\Users\chira\kova-agent\.venv\Lib\site-packages\xdist\dsession.py", line 217, in worker_workerfinished
+INTERNALERROR>     assert not crashitem, (crashitem, node)
+INTERNALERROR> AssertionError: ('tests/tools/test_browser_npx_warmup.py::test_runs_in_its_own_process_group_on_posix', <WorkerController gw9>)
+INTERNALERROR> assert not 'tests/tools/test_browser_npx_warmup.py::test_runs_in_its_own_process_group_on_posix'
+
+514 failed, 25452 passed, 400 skipped, 2 xfailed, 190 warnings, 18 errors in 1599.43s (0:26:39)
+EXIT: 3
