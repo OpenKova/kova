@@ -777,8 +777,7 @@ export const zhHant = defineLocale({
       localTitle: '本機閘道',
       localDesc: '在 localhost 啟動私有 Kova 後端。這是預設方式，可離線使用。',
       remoteTitle: '遠端閘道',
-      remoteDesc:
-        '將此桌面殼層連線至遠端 Kova 後端。託管閘道使用 OAuth 或帳號密碼；自託管閘道也可使用工作階段 Token。',
+      remoteDesc: '將此桌面殼層連線至遠端 Kova 後端。託管閘道使用 OAuth 或帳號密碼；自託管閘道也可使用工作階段 Token。',
       remoteUrlTitle: '遠端 URL',
       remoteUrlDesc: '遠端儀表板後端的基礎 URL。支援路徑前綴，例如 /kova。',
       probing: '正在檢查此閘道的驗證方式…',
@@ -2125,8 +2124,7 @@ export const zhHant = defineLocale({
     copy: '複製',
     copied: '已複製',
     done: '完成',
-    applyingBody:
-      'Kova 更新程式會在自己的視窗中接管，並在完成後自動重新開啟 Kova。更新期間請勿自行重新開啟 Kova。',
+    applyingBody: 'Kova 更新程式會在自己的視窗中接管，並在完成後自動重新開啟 Kova。更新期間請勿自行重新開啟 Kova。',
     applyingBodyBackend: '遠端後端正在套用更新並將重新啟動。恢復後 Kova 會自動重新連線。',
     applyingClose: '此視窗會在更新期間關閉，隨後 Kova 會自動重新開啟。',
     errorTitle: '更新未完成',

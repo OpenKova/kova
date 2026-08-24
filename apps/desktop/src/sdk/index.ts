@@ -132,9 +132,7 @@ export interface PluginFocusedSessionOwner {
 const $focusedSessionOwner = computed(
   [$focusedStoredSessionId, $sessions, $activeGatewayProfile, $connection],
   (focused, sessions, activeProfile, connection): PluginFocusedSessionOwner | null => {
-    const activeConnectionId = String(
-      connection?.connectionId || (connection?.mode === 'local' ? 'local' : '')
-    ).trim()
+    const activeConnectionId = String(connection?.connectionId || (connection?.mode === 'local' ? 'local' : '')).trim()
 
     const fallback = {
       connectionId: activeConnectionId,
@@ -175,8 +173,8 @@ const $focusedSessionOwner = computed(
 
 const $focusedSessionProfile = computed(
   [$focusedSessionOwner, $focusedStoredSessionId, $sessions, $activeGatewayProfile],
-  (owner, focused, sessions, activeProfile) => owner?.profile ||
-    rememberedSessionProfile(sessions, focused, activeProfile)
+  (owner, focused, sessions, activeProfile) =>
+    owner?.profile || rememberedSessionProfile(sessions, focused, activeProfile)
 )
 
 export interface PluginProfileRoute {
@@ -577,10 +575,7 @@ export const host = {
       retireLocalProfileGateways(targetProfile)
     }
 
-    await deleteProfile(
-      targetProfile,
-      route ? { connectionId: route.connectionId, profile: route.profile } : undefined
-    )
+    await deleteProfile(targetProfile, route ? { connectionId: route.connectionId, profile: route.profile } : undefined)
 
     // The profile rail paints from the shared $profiles cache; without a
     // refresh the deleted profile's badge survives and clicking it starts a
@@ -1106,9 +1101,6 @@ export { Contribute, type ContributeProps } from '@/contrib/react/contribute'
 // -- contracts ----------------------------------------------------------------
 
 export type { Contribution } from '@/contrib/types'
-/** The live gateway instance type — for typing the `gateway` prop `McpTab`
- *  takes; obtain the instance from `host.getGateway()`. */
-export type { HermesGateway } from '@/kova'
 /** Grab-to-pan for overflow containers (boards, timelines, wide tables) —
  *  the shared scrub primitive; don't hand-roll drag-to-scroll. */
 export { type GrabScroll, useGrabScroll } from '@/hooks/use-grab-scroll'
@@ -1125,6 +1117,9 @@ export {
   useI18n,
   usePluginI18n
 } from '@/i18n'
+/** The live gateway instance type — for typing the `gateway` prop `McpTab`
+ *  takes; obtain the instance from `host.getGateway()`. */
+export type { HermesGateway } from '@/kova'
 /** THE way to run a decorative rAF animation (avatars, shimmer, sprites):
  *  fps budget + hidden/minimized/unfocused pause + idle dormancy + teardown.
  *  Plugins must route animation clocks through this instead of raw rAF loops
@@ -1134,11 +1129,11 @@ export { type BudgetedLoop, type BudgetedLoopOptions, createBudgetedLoop } from 
  *  through here (1230 → "1.2k", 1_500_000 → "1.5M"). Don't hand-roll `/1000`. */
 export { compactNumber } from '@/lib/format'
 export { triggerHaptic as haptic } from '@/lib/haptics'
-export type { HermesOpenTarget } from '@/lib/kova-open-target'
 /** The app's lucide icon set (RefreshCw, LayoutDashboard, Activity, …). */
 export * as icons from '@/lib/icons'
 export { type KeybindContribution, KEYBINDS_AREA } from '@/lib/keybinds/actions'
 export { formatModifierToken } from '@/lib/keybinds/combo'
+export type { HermesOpenTarget } from '@/lib/kova-open-target'
 /** The app's deterministic identity color for a name (profiles, assignees,
  *  authors) + its translucent tag fill — so plugin-rendered identities read
  *  the same hue as everywhere else. */

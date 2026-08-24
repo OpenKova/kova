@@ -8023,9 +8023,7 @@ async function discoverCloudAgents(org?: string) {
       // A 401 means the portal session lapsed (and silent renewal could not
       // recover it) — surface it as a re-login, not a generic failure.
       if (error && error.statusCode === 401) {
-        const err = new Error(
-          'Your Kova Cloud session has expired. Open Settings → Gateway and sign in again.'
-        ) as any
+        const err = new Error('Your Kova Cloud session has expired. Open Settings → Gateway and sign in again.') as any
 
         err.needsCloudLogin = true
         err.cause = error
@@ -12376,10 +12374,7 @@ ipcMain.handle('kova:window:openInTerminal', async (_event, sessionId, opts) => 
     const scriptDir = path.join(app.getPath('userData'), 'open-in-terminal')
     fs.mkdirSync(scriptDir, { recursive: true })
 
-    const scriptPath = path.join(
-      scriptDir,
-      `kova-${crypto.randomBytes(6).toString('hex')}${terminalScriptExtension()}`
-    )
+    const scriptPath = path.join(scriptDir, `kova-${crypto.randomBytes(6).toString('hex')}${terminalScriptExtension()}`)
 
     fs.writeFileSync(
       scriptPath,
@@ -13814,8 +13809,7 @@ ipcMain.handle('kova:api', async (_event, request) => {
       isDefaultProfile: profile => profile === 'default',
       isValidProfileName: profile => PROFILE_NAME_RE.test(profile),
       prepareLocal: localRequest => prepareProfileDeleteRequest(localRequest).then(() => undefined),
-      teardownConnection: (connectionId, profile) =>
-        teardownConnectionScopedProfileBackend(connectionId, profile)
+      teardownConnection: (connectionId, profile) => teardownConnectionScopedProfileBackend(connectionId, profile)
     })
   }
 

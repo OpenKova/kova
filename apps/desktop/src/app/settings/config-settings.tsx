@@ -6,8 +6,8 @@ import { useSearchParams } from 'react-router'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { getElevenLabsVoices, getHermesConfigSchema, saveHermesConfig } from '@/kova'
 import { useI18n } from '@/i18n'
+import { getElevenLabsVoices, getHermesConfigSchema, saveHermesConfig } from '@/kova'
 import { triggerHaptic } from '@/lib/haptics'
 import { confirm } from '@/store/confirm'
 import {
@@ -106,8 +106,7 @@ function ConfigSettingsInner({
   } = useQuery({
     // Base key when following the active profile (matches every pre-existing
     // consumer); suffixed only for an explicit scope override.
-    queryKey:
-      scopeProfile == null ? ['kova-config-schema'] : ['kova-config-schema', normalizeProfileKey(scopeProfile)],
+    queryKey: scopeProfile == null ? ['kova-config-schema'] : ['kova-config-schema', normalizeProfileKey(scopeProfile)],
     queryFn: () => getHermesConfigSchema(scopeProfile),
     staleTime: 5 * 60 * 1000
   })

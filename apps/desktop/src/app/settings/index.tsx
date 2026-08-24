@@ -5,8 +5,8 @@ import { useLocation, useNavigate } from 'react-router'
 import { codiconIcon } from '@/components/ui/codicon'
 import { KbdCombo } from '@/components/ui/kbd'
 import { Tip } from '@/components/ui/tooltip'
-import { getHermesConfigDefaults, getHermesConfigRecord, saveHermesConfig } from '@/kova'
 import { useI18n } from '@/i18n'
+import { getHermesConfigDefaults, getHermesConfigRecord, saveHermesConfig } from '@/kova'
 import { triggerHaptic } from '@/lib/haptics'
 import {
   Archive,
@@ -390,11 +390,9 @@ export function SettingsView({ onClose, onConfigSaved, onMainModelChanged }: Set
       <KeysSettings view={keysView} />
     ) : activeView === 'notifications' ? (
       <NotificationsSettings />
-    ) : activeView === 'billing' ? (
-      // Billing is Nous-Portal-specific and hidden for Kova v1 — Kova's own
-      // billing arrives later; the component stays for that day.
-      null
-    ) : activeView === 'plugins' ? (
+    ) : activeView === 'billing' ? // Billing is Nous-Portal-specific and hidden for Kova v1 — Kova's own
+    // billing arrives later; the component stays for that day.
+    null : activeView === 'plugins' ? (
       <PluginsSettings />
     ) : (
       <SessionsSettings />

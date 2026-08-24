@@ -10,6 +10,7 @@ import { WIDGET_SHELL_CLASS } from '@/components/chat/widget-shell'
 import { Button } from '@/components/ui/button'
 import { Codicon } from '@/components/ui/codicon'
 import { Input } from '@/components/ui/input'
+import { useI18n } from '@/i18n'
 import {
   addMcpServer,
   authMcpServer,
@@ -22,7 +23,6 @@ import {
   removeMcpServer,
   setMcpServerEnabled
 } from '@/kova'
-import { useI18n } from '@/i18n'
 import { triggerHaptic } from '@/lib/haptics'
 import { AlertCircle, CheckCircle2, Loader2 } from '@/lib/icons'
 import { brandFor, brandGlyphStyle } from '@/lib/mcp-brands'

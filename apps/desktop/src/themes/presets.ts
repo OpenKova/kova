@@ -769,7 +769,6 @@ export const slateTheme: DesktopTheme = {
   }
 }
 
-
 /** Kova — Neural Studio's own identity: near-black chrome with dark-orange
  *  edging (dark), white chrome with the same orange (light). One accent hue
  *  (#c2410c dark / #ea580c light, tailwind orange-700/600) carries borders,

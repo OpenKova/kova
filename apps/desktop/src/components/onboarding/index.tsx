@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button'
 import { Codicon } from '@/components/ui/codicon'
 import { Input } from '@/components/ui/input'
 import { Progress } from '@/components/ui/progress'
-import { getGlobalModelOptions } from '@/kova'
 import { useI18n } from '@/i18n'
+import { getGlobalModelOptions } from '@/kova'
 import { Check, ChevronLeft, KeyRound, Loader2 } from '@/lib/icons'
 import { isProviderSetupErrorMessage } from '@/lib/provider-setup-errors'
 import { cn } from '@/lib/utils'
@@ -29,13 +29,7 @@ import {
 import type { ModelOptionProvider, OAuthProvider } from '@/types/kova'
 
 import { DocsLink, FlowPanel, Status } from './flow'
-import {
-  FeaturedProviderRow,
-  FireworksProviderRow,
-  OpenRouterProviderRow,
-  ProviderRow,
-  sortProviders
-} from './providers'
+import { FireworksProviderRow, OpenRouterProviderRow, ProviderRow, sortProviders } from './providers'
 
 export {
   FeaturedProviderRow,

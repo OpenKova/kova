@@ -1,3 +1,4 @@
+import { translateNow } from '@/i18n'
 import {
   addMcpServer,
   authMcpServer,
@@ -7,7 +8,6 @@ import {
   listMcpServers,
   removeMcpServer
 } from '@/kova'
-import { translateNow } from '@/i18n'
 import { completeMcpDesktopOAuth, McpOAuthCancelled } from '@/lib/mcp-dashboard-oauth'
 import { MCP_DIRECTORY } from '@/lib/mcp-directory'
 import { prettyName } from '@/lib/text'

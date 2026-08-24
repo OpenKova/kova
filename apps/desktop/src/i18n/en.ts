@@ -816,8 +816,7 @@ export const en: Translations = {
       intro:
         'Local by default. Use remote when this app should drive a Kova backend elsewhere. Gateway connections are machine-level; profiles are discovered from the gateways you connect.',
       envOverrideTitle: 'Environment variables are controlling this desktop session.',
-      envOverrideDesc:
-        'Unset KOVA_DESKTOP_REMOTE_URL and KOVA_DESKTOP_REMOTE_TOKEN to use the saved setting below.',
+      envOverrideDesc: 'Unset KOVA_DESKTOP_REMOTE_URL and KOVA_DESKTOP_REMOTE_TOKEN to use the saved setting below.',
       modeTitle: 'Connection mode',
       localTitle: 'Local gateway',
       localDesc: 'Start a private Kova backend on localhost. This is the default and works offline.',
@@ -2536,8 +2535,7 @@ export const en: Translations = {
     errorTitle: 'Update didn’t finish',
     errorBody: 'No worries — nothing was lost. You can try again now.',
     blockerTitle: 'Close local previews to update Kova?',
-    blockerBody:
-      'Kova needs to stop these local previews before updating. This will not modify or delete your files.',
+    blockerBody: 'Kova needs to stop these local previews before updating. This will not modify or delete your files.',
     foreignBlockerTitle: 'Close other processes to update Kova',
     foreignBlockerBody:
       'Kova can’t safely close these processes automatically. Close the app, terminal, or service that owns each one, then try the update again.',
@@ -2585,8 +2583,7 @@ export const en: Translations = {
     installTo: 'Will install to',
     retryAfterRun: 'I’ve run it -- retry',
     setupChoiceTitle: 'Set up Kova Desktop',
-    setupChoiceDesc:
-      'Connect this app to a Kova gateway you already run, or install Kova locally on this computer.',
+    setupChoiceDesc: 'Connect this app to a Kova gateway you already run, or install Kova locally on this computer.',
     connectExistingTitle: 'Connect to existing Kova',
     connectExistingShort: 'Connect existing',
     connectExistingDesc: 'Use a remote backend with a session token or browser sign-in. No local install will start.',
