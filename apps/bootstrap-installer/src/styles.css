@@ -27,22 +27,6 @@
  */
 @import '../../desktop/src/styles.css';
 
-/*
- * Kova light appearance — white chrome, same orange accent as the dark block
- * below. Mirrors kovaTheme.colors from apps/desktop/src/themes/presets.ts.
- * Unlayered so it wins over the imported @layer base :root light seeds.
- */
-:root {
-  --theme-primary: #ea580c;
-  --theme-secondary: color-mix(in srgb, #ea580c 8%, #ffffff);
-  --theme-accent-soft: color-mix(in srgb, #ea580c 12%, #ffffff);
-  --theme-midground: #ea580c;
-  --theme-warm: #fb923c;
-  --theme-background-seed: #ffffff;
-  --theme-sidebar-seed: #fafaf9;
-  --theme-bubble-seed: color-mix(in srgb, #ea580c 7%, #ffffff);
-  --dt-ring: #ea580c;
-}
 
 /* Installer-only additions: a fade-in animation and a warm radial glow
    for the welcome screen. Everything else inherits from the desktop. */
@@ -102,4 +86,21 @@
   --dt-primary-foreground: #ffffff;
   --dt-destructive: #ef4444;
   --dt-destructive-foreground: #ffffff;
+}
+
+/*
+ * Kova light appearance — white chrome, same orange accent as the dark block
+ * below. Mirrors kovaTheme.colors from apps/desktop/src/themes/presets.ts.
+ * Unlayered so it wins over the imported @layer base :root light seeds.
+ */
+:root {
+  --theme-primary: #ea580c;
+  --theme-secondary: color-mix(in srgb, #ea580c 8%, #ffffff);
+  --theme-accent-soft: color-mix(in srgb, #ea580c 12%, #ffffff);
+  --theme-midground: #ea580c;
+  --theme-warm: #fb923c;
+  --theme-background-seed: #ffffff;
+  --theme-sidebar-seed: #fafaf9;
+  --theme-bubble-seed: color-mix(in srgb, #ea580c 7%, #ffffff);
+  --dt-ring: #ea580c;
 }
