@@ -1,4 +1,3 @@
-<!-- CI-trigger -->
 <div align="center">
 
 <img src="assets/banner.png" alt="Kova Agent" width="720"/>
