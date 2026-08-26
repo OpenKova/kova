@@ -82,9 +82,7 @@ test('platform detection surfaces transport failures as themselves, not unsuppor
 })
 
 test('helper command uses the fixed remote Python entry point and quotes path data', () => {
-  const command = helperCommand({ python: "C:\\Program Files\\Kova's\\python.exe" }, 'inspect', [
-    'C:\\x y\\kova.exe'
-  ])
+  const command = helperCommand({ python: "C:\\Program Files\\Kova's\\python.exe" }, 'inspect', ['C:\\x y\\kova.exe'])
 
   const encoded = command.split(' ').pop()!
   const script = Buffer.from(encoded, 'base64').toString('utf16le')

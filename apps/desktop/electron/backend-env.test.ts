@@ -120,9 +120,7 @@ test('buildDesktopBackendEnv extends PYTHONPATH and backend PATH together', () =
 
   assert.equal(env.PYTHONPATH, '/repo/kova-agent:/existing/pythonpath')
   assert.ok(
-    env.PATH.startsWith(
-      '/Users/test/.kova/node/bin:/Users/test/.kova/node:/Users/test/.kova/kova-agent/venv/bin:'
-    )
+    env.PATH.startsWith('/Users/test/.kova/node/bin:/Users/test/.kova/node:/Users/test/.kova/kova-agent/venv/bin:')
   )
   assert.ok(env.PATH.includes('/opt/homebrew/bin'))
 })
@@ -177,9 +175,7 @@ test('Windows PATH casing and delimiter are preserved without POSIX sane entries
   // Windows leads with the portable layout (install.ps1 unpacks node.exe
   // straight into node\, no bin\), then the POSIX shape for migrated installs.
   assert.ok(
-    env.Path.startsWith(
-      'C:\\Users\\test\\AppData\\Local\\kova\\node;C:\\Users\\test\\AppData\\Local\\kova\\node\\bin;'
-    )
+    env.Path.startsWith('C:\\Users\\test\\AppData\\Local\\kova\\node;C:\\Users\\test\\AppData\\Local\\kova\\node\\bin;')
   )
   assert.ok(env.Path.includes('\\venv\\Scripts;'))
   assert.ok(env.Path.includes(';C:\\Windows\\System32;C:\\Windows'))
