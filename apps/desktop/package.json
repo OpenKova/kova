@@ -2,7 +2,7 @@
   "name": "kova",
   "productName": "Kova",
   "private": true,
-  "version": "0.17.0",
+  "version": "0.2.0",
   "description": "Native desktop shell for Kova Agent.",
   "author": "Neural Studio",
   "repository": {
