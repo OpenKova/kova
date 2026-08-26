@@ -30,8 +30,8 @@ param(
     # existing tree pass -ForceCommit.
     [switch]$ForceCommit,
     [string]$Tag = "",
-    [string]$KovaHome = $(if ($env:KOVA_HOME) { $env:KOVA_HOME } else { "$env:LOCALAPPDATA\kova" }),
-    [string]$InstallDir = $(if ($env:KOVA_HOME) { "$env:KOVA_HOME\kova-agent" } else { "$env:LOCALAPPDATA\kova\kova-agent" }),
+    [string]$KovaHome = $(if ($env:KOVA_HOME) { $env:KOVA_HOME } else { "$env:LOCALAPPDATA\KovaAgent" }),
+    [string]$InstallDir = $(if ($env:KOVA_HOME) { "$env:KOVA_HOME\kova-agent" } else { "$env:LOCALAPPDATA\KovaAgent\kova-agent" }),
 
     # --- Stage protocol (additive; default invocation behaves as before) ----
     # See the "Stage protocol" section near the bottom of the file for the
@@ -345,14 +345,14 @@ if ($PSBoundParameters.ContainsKey('KovaHome')) {
     $KovaHome = ConvertTo-LongPath $KovaHome
 } else {
     $KovaHome = ConvertTo-LongPath $(
-        if ($env:KOVA_HOME) { $env:KOVA_HOME } else { "$env:LOCALAPPDATA\kova" }
+        if ($env:KOVA_HOME) { $env:KOVA_HOME } else { "$env:LOCALAPPDATA\KovaAgent" }
     )
 }
 if ($PSBoundParameters.ContainsKey('InstallDir')) {
     $InstallDir = ConvertTo-LongPath $InstallDir
 } else {
     $InstallDir = ConvertTo-LongPath $(
-        if ($env:KOVA_HOME) { "$env:KOVA_HOME\kova-agent" } else { "$env:LOCALAPPDATA\kova\kova-agent" }
+        if ($env:KOVA_HOME) { "$env:KOVA_HOME\kova-agent" } else { "$env:LOCALAPPDATA\KovaAgent\kova-agent" }
     )
 }
 if ($script:NormalizedProfilePaths) {

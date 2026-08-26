@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { type CSSProperties } from 'react'
 
 import { HackeryButton } from '../components/hackery-button'
-import { launchHermesDesktop } from '../store'
+import { launchKovaDesktop } from '../store'
 
 /*
  * Success screen. KOVA AGENT wordmark stays as the visual anchor
@@ -13,7 +13,7 @@ import { launchHermesDesktop } from '../store'
  * Launching the desktop can fail (e.g. Stage-Desktop was skipped and
  * Kova.exe doesn't exist). We catch the Tauri error and surface it
  * inline rather than silently doing nothing — the previous version
- * had `onClick={() => void launchHermesDesktop()}` which swallowed
+ * had `onClick={() => void launchKovaDesktop()}` which swallowed
  * the rejection and left the user staring at an unresponsive button.
  */
 export default function Success() {
@@ -25,7 +25,7 @@ export default function Success() {
     setLaunching(true)
 
     try {
-      await launchHermesDesktop()
+      await launchKovaDesktop()
       // On success the installer exits — control never returns here.
     } catch (e) {
       const msg = e instanceof Error ? e.message : String(e)

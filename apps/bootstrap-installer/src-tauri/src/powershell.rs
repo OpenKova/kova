@@ -148,7 +148,7 @@ pub type CancelRx = mpsc::Receiver<()>;
 /// life of the gateway — and every obligation downstream of the read is
 /// stranded with it.
 ///
-/// Same bound `Invoke-HermesStep` grew in `scripts/desktop-update/windows.ps1`
+/// Same bound `Invoke-KovaStep` grew in `scripts/desktop-update/windows.ps1`
 /// (#90455), and the same shape as Go's `exec.Cmd.WaitDelay`.
 pub(crate) const DRAIN_GRACE: Duration = Duration::from_secs(20);
 
@@ -299,9 +299,16 @@ pub async fn run_script(
         cmd.current_dir(cwd);
     }
 
-    if let Some(home) = kova_home_override {
-        cmd.env("KOVA_HOME", home);
-    }
+    // SAFETY: always pin KOVA_HOME for the child. When no explicit override is
+    // supplied, resolve the same dedicated default as `paths::kova_home()` so a
+    // STALE user-level KOVA_HOME env var (e.g. left by an older install that
+    // pointed at another product's data directory) can NEVER redirect the
+    // fresh install at, and clobber, an existing home. (#kova-safety)
+    let pinned_home: std::borrow::Cow<str> = match kova_home_override {
+        Some(home) => std::borrow::Cow::Borrowed(home),
+        None => std::borrow::Cow::Owned(crate::paths::kova_home().to_string_lossy().into_owned()),
+    };
+    cmd.env("KOVA_HOME", pinned_home.as_ref());
 
     cmd.stdin(Stdio::null())
         .stdout(Stdio::piped())
@@ -551,7 +558,7 @@ info line
     }
 
     #[test]
-    fn stable_script_cwd_prefers_existing_hermes_home() {
+    fn stable_script_cwd_prefers_existing_kova_home() {
         let script = Path::new("/tmp/install.sh");
         let cwd = stable_script_cwd(script, Some("/"));
         assert_eq!(cwd, Some(Path::new("/")));

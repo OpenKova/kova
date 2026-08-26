@@ -45,7 +45,7 @@ BOLD='\033[1m'
 # Configuration
 REPO_URL_SSH="git@github.com:NousResearch/kova-agent.git"
 REPO_URL_HTTPS="https://github.com/OpenKova/kova.git"
-KOVA_HOME="${KOVA_HOME:-$HOME/.kova}"
+KOVA_HOME="${KOVA_HOME:-$HOME/.kova-agent}"
 # INSTALL_DIR is resolved AFTER arg parsing and OS detection so we can pick an
 # FHS-style layout for root installs.  Track whether the user gave us an
 # explicit directory — if so we never override it.
@@ -184,9 +184,9 @@ while [[ $# -gt 0 ]]; do
             echo "  --non-interactive  Skip stages that require user input"
             echo "  --include-desktop  Also build the desktop app (apps/desktop -> Kova.app)"
             echo "  --dir PATH     Installation directory"
-            echo "                   default (non-root):  ~/.kova/kova-agent"
+            echo "                   default (non-root):  ~/.kova-agent/kova-agent"
             echo "                   default (root, Linux): /usr/local/lib/kova-agent"
-            echo "  --kova-home PATH  Data directory (default: ~/.kova, or \$KOVA_HOME)"
+            echo "  --kova-home PATH  Data directory (default: ~/.kova-agent, or \$KOVA_HOME)"
             echo "  -h, --help     Show this help"
             echo ""
             echo "Notes:"
@@ -194,7 +194,7 @@ while [[ $# -gt 0 ]]; do
             echo "  /usr/local/lib/kova-agent and links the command into"
             echo "  /usr/local/bin/kova (FHS layout — matches Claude Code / Codex CLI)."
             echo "  Data, config, sessions, and logs still live in \$KOVA_HOME"
-            echo "  (default /root/.kova).  This keeps Docker bind-mounted volumes"
+            echo "  (default /root/.kova-agent).  This keeps Docker bind-mounted volumes"
             echo "  small and ensures the command is on PATH for all shells."
             echo "  Existing installs at \$KOVA_HOME/kova-agent are preserved in-place."
             echo "  --ensure DEPS  Install only specified deps (comma-separated)"
@@ -1045,7 +1045,7 @@ install_node() {
         return 0
     fi
 
-    log_info "Extracting to ~/.kova/node/..."
+    log_info "Extracting to ~/.kova-agent/node/..."
     if [[ "$tarball_name" == *.tar.xz ]]; then
         tar xf "$tmp_dir/$tarball_name" -C "$tmp_dir"
     else
@@ -1062,7 +1062,7 @@ install_node() {
         return 0
     fi
 
-    # Place into ~/.kova/node/ and symlink binaries into the same bin dir
+    # Place into ~/.kova-agent/node/ and symlink binaries into the same bin dir
     # the kova command uses (get_command_link_dir): /usr/local/bin for root
     # FHS installs, $PREFIX/bin on Termux, ~/.local/bin otherwise.
     rm -rf "$KOVA_HOME/node"
@@ -1083,7 +1083,7 @@ install_node() {
 
     local installed_ver
     installed_ver=$("$KOVA_HOME/node/bin/node" --version 2>/dev/null)
-    log_success "Node.js $installed_ver installed to ~/.kova/node/"
+    log_success "Node.js $installed_ver installed to ~/.kova-agent/node/"
     HAS_NODE=true
 }
 
@@ -2051,20 +2051,20 @@ EOF
 copy_config_templates() {
     log_info "Setting up configuration files..."
 
-    # Create ~/.kova directory structure (config at top level, code in subdir)
+    # Create ~/.kova-agent directory structure (config at top level, code in subdir)
     mkdir -p "$KOVA_HOME"/{cron,sessions,logs,pairing,hooks,image_cache,audio_cache,memories,skills}
 
-    # Create .env at ~/.kova/.env (top level, easy to find)
+    # Create .env at ~/.kova-agent/.env (top level, easy to find)
     if [ ! -f "$KOVA_HOME/.env" ]; then
         if [ -f "$INSTALL_DIR/.env.example" ]; then
             cp "$INSTALL_DIR/.env.example" "$KOVA_HOME/.env"
-            log_success "Created ~/.kova/.env from template"
+            log_success "Created ~/.kova-agent/.env from template"
         else
             touch "$KOVA_HOME/.env"
-            log_success "Created ~/.kova/.env"
+            log_success "Created ~/.kova-agent/.env"
         fi
     else
-        log_info "~/.kova/.env already exists, keeping it"
+        log_info "~/.kova-agent/.env already exists, keeping it"
     fi
     # Restrict .env permissions — this file holds API keys and tokens.
     # 0600 ensures only the file owner can read/write, matching standard
@@ -2072,14 +2072,14 @@ copy_config_templates() {
     chmod 600 "$KOVA_HOME/.env"
     configure_browser_env_from_system_browser
 
-    # Create config.yaml at ~/.kova/config.yaml (top level, easy to find)
+    # Create config.yaml at ~/.kova-agent/config.yaml (top level, easy to find)
     if [ ! -f "$KOVA_HOME/config.yaml" ]; then
         if [ -f "$INSTALL_DIR/cli-config.yaml.example" ]; then
             cp "$INSTALL_DIR/cli-config.yaml.example" "$KOVA_HOME/config.yaml"
-            log_success "Created ~/.kova/config.yaml from template"
+            log_success "Created ~/.kova-agent/config.yaml from template"
         fi
     else
-        log_info "~/.kova/config.yaml already exists, keeping it"
+        log_info "~/.kova-agent/config.yaml already exists, keeping it"
     fi
 
     # Create SOUL.md if it doesn't exist (global persona file).
@@ -2091,12 +2091,12 @@ copy_config_templates() {
         cat > "$KOVA_HOME/SOUL.md" << 'SOUL_EOF'
 You are Kova Agent, an intelligent AI assistant created by Neural Studio. You are helpful, knowledgeable, and direct. You assist users with a wide range of tasks including answering questions, writing and editing code, analyzing information, creative work, and executing actions via your tools. You communicate clearly, admit uncertainty when appropriate, and prioritize being genuinely useful over being verbose unless otherwise directed below. Be targeted and efficient in your exploration and investigations.
 SOUL_EOF
-        log_success "Created ~/.kova/SOUL.md (edit to customize personality)"
+        log_success "Created ~/.kova-agent/SOUL.md (edit to customize personality)"
     fi
 
-    log_success "Configuration directory ready: ~/.kova/"
+    log_success "Configuration directory ready: ~/.kova-agent/"
 
-    # Seed bundled skills into ~/.kova/skills/ (manifest-based, one-time per skill)
+    # Seed bundled skills into ~/.kova-agent/skills/ (manifest-based, one-time per skill)
     if [ "$NO_SKILLS" = true ]; then
         # Blank-slate install: write the opt-out marker and skip seeding.
         # skills_sync.py and `kova update` both honor this marker, so the
@@ -2108,14 +2108,14 @@ SOUL_EOF
         log_info "Skipping bundled skills (--no-skills). Wrote $KOVA_HOME/.no-bundled-skills"
         log_info "  Future 'kova update' runs will not inject bundled skills. Delete the marker to opt back in."
     else
-        log_info "Syncing bundled skills to ~/.kova/skills/ ..."
+        log_info "Syncing bundled skills to ~/.kova-agent/skills/ ..."
         if "$INSTALL_DIR/venv/bin/python" "$INSTALL_DIR/tools/skills_sync.py" 2>/dev/null; then
-            log_success "Skills synced to ~/.kova/skills/"
+            log_success "Skills synced to ~/.kova-agent/skills/"
         else
             # Fallback: simple directory copy if Python sync fails
             if [ -d "$INSTALL_DIR/skills" ] && [ ! "$(ls -A "$KOVA_HOME/skills/" 2>/dev/null | grep -v '.bundled_manifest')" ]; then
                 cp -r "$INSTALL_DIR/skills/"* "$KOVA_HOME/skills/" 2>/dev/null || true
-                log_success "Skills copied to ~/.kova/skills/"
+                log_success "Skills copied to ~/.kova-agent/skills/"
             fi
         fi
     fi
@@ -2798,7 +2798,7 @@ maybe_start_gateway() {
             fi
             nohup $KOVA_CMD gateway > "$KOVA_HOME/logs/gateway.log" 2>&1 &
             GATEWAY_PID=$!
-            log_success "Gateway started (PID $GATEWAY_PID). Logs: ~/.kova/logs/gateway.log"
+            log_success "Gateway started (PID $GATEWAY_PID). Logs: ~/.kova-agent/logs/gateway.log"
             log_info "To stop: kill $GATEWAY_PID"
             log_info "To restart later: kova gateway"
             if [ "$DISTRO" = "termux" ]; then
