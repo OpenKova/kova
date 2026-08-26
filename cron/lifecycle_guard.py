@@ -71,7 +71,7 @@ _GATEWAY_LIFECYCLE_PATTERN = re.compile(
     # matching via the `/kova` tail, while every real command position
     # (start of text, whitespace, `;`/`&`/`|`, `$(`, backtick, even a
     # U+FFFD from binary-content decoding) still matches.
-    r"(?:(?<![/\w.\-])kova\s+gateway\s+(?:restart|stop|uninstall)\b)"
+    r"(?:(?<![/\w.\-])(?:kova|hermes)\s+gateway\s+(?:restart|stop|uninstall)\b)"
     # Branch B: launchctl ops on a kova-gateway label. macOS launchd
     # labels look like `in.neuralstudio.kova.gateway` / `kova-gateway`. Requiring the
     # gateway identifier prevents blocking unrelated kova services (e.g.
@@ -91,15 +91,15 @@ _GATEWAY_LIFECYCLE_PATTERN = re.compile(
     # left the bypassable approval layer (tools/approval.py, skipped on
     # force=True) as the only cover, while this hard block — documented as
     # "force=True cannot help here" — let them through (#80260).
-    r"|(?:launchctl\s+(?:kickstart|unload|load|stop|restart|submit|bootstrap|bootout|remove|disable)\b[^\n]*\bhermes[.\-]?gateway)"
+    r"|(?:launchctl\s+(?:kickstart|unload|load|stop|restart|submit|bootstrap|bootout|remove|disable)\b[^\n]*\b(?:hermes|kova)[.\-]?gateway)"
     # Branch C: systemctl ops on a kova-gateway unit.
-    r"|(?:systemctl\s+(?:-\S+\s+)*(?:restart|stop|start)\b[^\n]*\bhermes[.\-]?gateway)"
+    r"|(?:systemctl\s+(?:-\S+\s+)*(?:restart|stop|start)\b[^\n]*\b(?:hermes|kova)[.\-]?gateway)"
     # Branch D: pkill / kill targeting the kova gateway process. Both
     # token orders because real reproductions show both.
     # Leading \b ensures we match "pkill" or "kill" as whole words, not as
     # suffixes of other words (e.g. "skill" -> "kill").
-    r"|(?:\bp?kill\b[^\n]*\bhermes\b[^\n]*\bgateway)"
-    r"|(?:\bp?kill\b[^\n]*\bgateway\b[^\n]*\bhermes)"
+    r"|(?:\bp?kill\b[^\n]*\b(?:kova|hermes)\b[^\n]*\bgateway)"
+    r"|(?:\bp?kill\b[^\n]*\bgateway\b[^\n]*\b(?:kova|hermes))"
 )
 
 
@@ -202,7 +202,7 @@ def _named_profile_is_current(named: str) -> bool:
 _LAUNCHCTL_LIFECYCLE_VERBS_RE = re.compile(
     r"(?i)\blaunchctl\s+(?:kickstart|unload|load|stop|restart|bootout|kill|disable|remove)\b"
 )
-_HERMES_GATEWAY_LABEL_RE = re.compile(r"(?i)\bhermes[.\-]?gateway\b")
+_HERMES_GATEWAY_LABEL_RE = re.compile(r"(?i)\b(?:hermes|kova)[.\-]?gateway\b")
 
 
 def _contains_launchctl_gateway_lifecycle(normalized_text: str) -> bool:
@@ -412,64 +412,52 @@ def _split_logical_lines(text: str) -> list[str]:
 def _iter_command_segments(command: str) -> Iterator[list[str]]:
     """Yield shell-tokenized command segments, honoring quotes and comments.
 
-    A newline inside a quoted token is data, not a command separator.
-    First split on logical lines (newlines outside quotes), then tokenize
-    each logical line with shlex. If a logical line cannot be tokenized
-    (unbalanced quotes), fall back to per-physical-line tokenization for
-    that logical line.
+    Tokenizes each line TWICE — once with POSIX escaping rules and once
+    with Windows-native path rules — and yields both segment sets. The
+    guard consumes candidates from either dialect: on POSIX only the
+    POSIX pass produces meaningful output, on Windows backslash paths
+    survive in the second pass while forward-slash shell syntax still
+    arrives via the first. Over-scanning is harmless here (the guard
+    only decides whether to *block*), while under-scanning silently
+    misses real referenced scripts.
     """
     normalized = command.replace("\\\n", "")
-    logical_lines = _split_logical_lines(normalized)
-
-    for line in logical_lines:
-        # Try to tokenize the logical line as a whole.
-        try:
-            lexer = shlex.shlex(
-                line,
-                posix=True,
-                punctuation_chars=";&|()",
-            )
-            lexer.whitespace_split = True
-            lexer.commenters = "#"
-            tokens = list(lexer)
-        except ValueError:
-            # Fall back to per-physical-line tokenization for this logical line.
-            # This handles cases where quotes are unbalanced across lines.
-            for physical_line in line.splitlines():
-                try:
-                    lexer = shlex.shlex(
-                        physical_line,
-                        posix=True,
-                        punctuation_chars=";&|()",
-                    )
-                    lexer.whitespace_split = True
-                    lexer.commenters = "#"
-                    tokens = list(lexer)
-                except ValueError:
-                    continue
-
-                segment: list[str] = []
-                for token in tokens:
-                    if token and set(token) <= _CONTROL_CHARS:
-                        if segment:
-                            yield segment
-                            segment = []
-                        continue
-                    segment.append(token)
-                if segment:
-                    yield segment
-            continue
-
-        segment: list[str] = []
-        for token in tokens:
-            if token and set(token) <= _CONTROL_CHARS:
-                if segment:
-                    yield segment
-                    segment = []
+    lines = normalized.splitlines() or [normalized]
+    seen: set[tuple[str, ...]] = set()
+    for line in lines:
+        for windows_mode in ((os.name == "nt"), False) if os.name == "nt" else (False,):
+            try:
+                lexer = shlex.shlex(
+                    line,
+                    posix=not windows_mode,
+                    punctuation_chars=";&|()",
+                )
+                lexer.whitespace_split = True
+                lexer.commenters = "" if windows_mode else "#"
+                tokens = list(lexer)
+            except ValueError:
                 continue
-            segment.append(token)
-        if segment:
-            yield segment
+
+            segment: list[str] = []
+            for token in tokens:
+                if windows_mode:
+                    token = token.strip('"')
+                    if token.startswith("#"):
+                        break
+                if token and set(token) <= _CONTROL_CHARS:
+                    if segment:
+                        t = tuple(segment)
+                        if t not in seen:
+                            seen.add(t)
+                            yield segment
+                        segment = []
+                    continue
+                segment.append(token)
+            if segment:
+                t = tuple(segment)
+                if t not in seen:
+                    seen.add(t)
+                    yield segment
 
 
 def _executable_name(token: str) -> str:
