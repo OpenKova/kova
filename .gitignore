@@ -36,6 +36,10 @@ data/
 # `data/` pattern above would otherwise swallow it.
 !kova_cli/data/
 !kova_cli/data/plugin_index.json
+# Website user stories are committed content (docs build needs them at a fixed
+# path), not generated data.
+!website/src/data/
+!website/src/data/userStories.json
 .pytest_cache/
 test_durations.json
 .pytest-cache/
