@@ -699,7 +699,7 @@ When container mode is enabled, kova runs inside a persistent Ubuntu container w
 ```
 Host                                    Container
 ────                                    ─────────
-/nix/store/...-hermes-agent-0.1.0  ──►  /nix/store/... (ro)
+/nix/store/...-Kova-agent-0.1.0  ──►  /nix/store/... (ro)
 ~/.kova -> /var/lib/kova/.kova       (symlink bridge, per hostUsers)
 /var/lib/kova/                    ──►  /data/          (rw)
   ├── current-package -> /nix/store/...    (symlink, updated each rebuild)

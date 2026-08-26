@@ -130,7 +130,7 @@ If you prefer to configure the connection through the UI instead of environment 
 5. Click **+ Add New Connection**
 6. Enter:
    - **URL**: `http://host.docker.internal:8642/v1`
-   - **API Key**: the exact same value as `API_SERVER_KEY` in Hermes
+   - **API Key**: the exact same value as `API_SERVER_KEY` in Kova
 7. Click the **checkmark** to verify the connection
 8. **Save**
 

@@ -8,7 +8,7 @@ ntfy makes a great lightweight push channel for Kova: subscribe to a topic from 
 
 ## Prerequisites
 
-- A topic name (any unique string — `hermes-myname-2026` works fine)
+- A topic name (any unique string — `Kova-myname-2026` works fine)
 - The [ntfy mobile app](https://ntfy.sh/docs/subscribe/phone/) installed and subscribed to that topic
 - Optional: a self-hosted ntfy server, or an `ntfy.sh` account token for private/reserved topics
 
@@ -29,9 +29,9 @@ Select **ntfy** and follow the prompts.
 Add these to `~/.kova/.env`:
 
 ```
-NTFY_TOPIC=hermes-myname-2026
-NTFY_ALLOWED_USERS=hermes-myname-2026
-NTFY_HOME_CHANNEL=hermes-myname-2026
+NTFY_TOPIC=Kova-myname-2026
+NTFY_ALLOWED_USERS=Kova-myname-2026
+NTFY_HOME_CHANNEL=Kova-myname-2026
 ```
 
 | Variable | Required | Description |
@@ -56,18 +56,18 @@ This means **anyone who knows the topic can talk to the agent**. To make that a 
 
 - **Self-host ntfy** and lock the topic down with [Access Control](https://docs.ntfy.sh/config/#access-control). Only authorized clients with the read/write token can publish.
 - Or **use a private topic on ntfy.sh** ([reserved topics](https://docs.ntfy.sh/publish/#reserved-topics) require an account) and protect it with a `NTFY_TOKEN`.
-- Or **pick a long, unguessable topic name** (`hermes-7d4f9c8b-2026`) and treat it as the shared secret. This is the lightest setup but the topic name leaks via any logs or screenshots.
+- Or **pick a long, unguessable topic name** (`Kova-7d4f9c8b-2026`) and treat it as the shared secret. This is the lightest setup but the topic name leaks via any logs or screenshots.
 
 In all cases, do not put sensitive data through ntfy unless the underlying topic is access-controlled.
 
 ## Quick start — talk to your agent from your phone
 
-1. Pick a topic name: `hermes-myname-2026`
-2. On your phone: install the [ntfy app](https://ntfy.sh/docs/subscribe/phone/), tap **+**, enter `hermes-myname-2026`
+1. Pick a topic name: `Kova-myname-2026`
+2. On your phone: install the [ntfy app](https://ntfy.sh/docs/subscribe/phone/), tap **+**, enter `Kova-myname-2026`
 3. On the host:
    ```bash
-   echo 'NTFY_TOPIC=hermes-myname-2026' >> ~/.kova/.env
-   echo 'NTFY_ALLOWED_USERS=hermes-myname-2026' >> ~/.kova/.env
+   echo 'NTFY_TOPIC=Kova-myname-2026' >> ~/.kova/.env
+   echo 'NTFY_ALLOWED_USERS=Kova-myname-2026' >> ~/.kova/.env
    kova gateway restart
    ```
 4. From the ntfy app, send a message to the topic. The agent's reply lands as a push notification.

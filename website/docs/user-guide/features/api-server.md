@@ -314,7 +314,7 @@ Kova never retries the same action through another backend.
 2. Kova returns a single-use ticket with a 30-second TTL and the filtered,
    server-bound controller scope.
 3. Open `GET /v1/browser-control/ws` with both WebSocket subprotocols:
-   `hermes-browser-control-v1` and
+   `Kova-browser-control-v1` and
    `kova-browser-control-ticket.<ticket>`.
 
 The ticket is never accepted in the query string. Unknown, expired, reused, or

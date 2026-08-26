@@ -552,7 +552,7 @@ scp ~/.kova/mcp-tokens/my-oauth-server{,.client}.json \
 ```
 主机                                    容器
 ────                                    ─────────
-/nix/store/...-hermes-agent-0.1.0  ──►  /nix/store/... (ro)
+/nix/store/...-Kova-agent-0.1.0  ──►  /nix/store/... (ro)
 ~/.kova -> /var/lib/kova/.kova       （符号链接桥接，按 hostUsers）
 /var/lib/kova/                    ──►  /data/          (rw)
   ├── current-package -> /nix/store/...    （符号链接，每次重建更新）

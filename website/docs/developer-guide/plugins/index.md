@@ -1095,7 +1095,7 @@ The canonical list of kinds is `VALID_MIDDLEWARE` in `kova_cli/middleware.py`:
 - You can include `source`, `reason`, and `name` strings in the returned dict. They land in the middleware trace, which downstream observer hooks receive as the `middleware_trace` kwarg.
 - `next_call` in execution middleware is **single-use**. Calling it twice raises, because it would re-run the provider or tool.
 - A middleware callback that raises is logged and skipped; the chain continues. A downstream failure raised after your `next_call` propagates as itself. Middleware can never break the base runtime path.
-- Middleware payloads carry `middleware_schema_version` (`hermes.middleware.v1`) alongside the observer telemetry fields.
+- Middleware payloads carry `middleware_schema_version` (`Kova.middleware.v1`) alongside the observer telemetry fields.
 - Unknown kinds register with a warning instead of failing, so a plugin written against a newer Kova still loads on an older one.
 
 ### Register CLI commands

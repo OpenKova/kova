@@ -150,7 +150,7 @@ model:
 
 fallback_providers:
   - provider: nous
-    model: nous-hermes-3
+    model: nous-Kova-3
 ```
 
 **Local model as fallback for cloud:**

@@ -7,7 +7,7 @@
   <a href="https://kova-agent.nousresearch.com/">Kova Agent</a> | <a href="https://kova-agent.nousresearch.com/">Kova Desktop</a>
 </p>
 <p align="center">
-  <a href="https://kova-agent.nousresearch.com/docs/"><img src="https://img.shields.io/badge/Docs-hermes--agent.nousresearch.com-FFD700?style=for-the-badge" alt="Documentación"></a>
+  <a href="https://kova-agent.nousresearch.com/docs/"><img src="https://img.shields.io/badge/Docs-kova.neuralstudio.in-FFD700?style=for-the-badge" alt="Documentación"></a>
   <a href="https://discord.gg/NousResearch"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
   <a href="https://github.com/NousResearch/kova-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/Licencia-MIT-green?style=for-the-badge" alt="Licencia: MIT"></a>
   <a href="https://nousresearch.com"><img src="https://img.shields.io/badge/Creado%20por-Nous%20Research-blueviolet?style=for-the-badge" alt="Creado por Neural Studio"></a>

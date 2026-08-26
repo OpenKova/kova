@@ -16,7 +16,7 @@ Model provider plugins are the third kind of **provider plugin**. The others are
 
 `providers/__init__.py._discover_providers()` runs lazily the first time any code calls `get_provider_profile()` or `list_providers()`. Discovery order:
 
-1. **Bundled plugins** — `<repo>/plugins/model-providers/<name>/` — ship with Hermes
+1. **Bundled plugins** — `<repo>/plugins/model-providers/<name>/` — ship with Kova
 2. **User plugins** — `$KOVA_HOME/plugins/model-providers/<name>/` — drop in any directory; no restart required for subsequent sessions
 3. **Legacy single-file** — `<repo>/providers/<name>.py` — back-compat for out-of-tree editable installs
 

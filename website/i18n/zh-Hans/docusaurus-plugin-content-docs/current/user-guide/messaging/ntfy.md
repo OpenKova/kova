@@ -6,7 +6,7 @@ ntfy 是 Kova 的轻量级推送渠道的理想选择：通过 [ntfy 移动应�
 
 ## 前提条件
 
-- 一个 topic 名称（任意唯一字符串——`hermes-myname-2026` 即可）
+- 一个 topic 名称（任意唯一字符串——`Kova-myname-2026` 即可）
 - 已安装 [ntfy 移动应用](https://ntfy.sh/docs/subscribe/phone/) 并订阅该 topic
 - 可选：自托管的 ntfy 服务器，或用于私有/保留 topic 的 `ntfy.sh` 账户 token
 
@@ -27,9 +27,9 @@ kova gateway setup
 将以下内容添加到 `~/.kova/.env`：
 
 ```
-NTFY_TOPIC=hermes-myname-2026
-NTFY_ALLOWED_USERS=hermes-myname-2026
-NTFY_HOME_CHANNEL=hermes-myname-2026
+NTFY_TOPIC=Kova-myname-2026
+NTFY_ALLOWED_USERS=Kova-myname-2026
+NTFY_HOME_CHANNEL=Kova-myname-2026
 ```
 
 | 变量 | 是否必填 | 说明 |
@@ -54,18 +54,18 @@ ntfy 没有原生的已认证用户身份。已发布消息中的 `title` 字段
 
 - **自托管 ntfy** 并通过[访问控制](https://docs.ntfy.sh/config/#access-control)锁定 topic。只有持有读/写 token 的授权客户端才能发布。
 - 或**在 ntfy.sh 上使用私有 topic**（[保留 topic](https://docs.ntfy.sh/publish/#reserved-topics) 需要账户），并通过 `NTFY_TOKEN` 保护。
-- 或**选择一个长且难以猜测的 topic 名称**（`hermes-7d4f9c8b-2026`），将其视为共享密钥。这是最轻量的方案，但 topic 名称可能通过日志或截图泄露。
+- 或**选择一个长且难以猜测的 topic 名称**（`Kova-7d4f9c8b-2026`），将其视为共享密钥。这是最轻量的方案，但 topic 名称可能通过日志或截图泄露。
 
 在任何情况下，除非底层 topic 已启用访问控制，否则不要通过 ntfy 传输敏感数据。
 
 ## 快速开始——从手机与 agent 对话
 
-1. 选择一个 topic 名称：`hermes-myname-2026`
-2. 在手机上：安装 [ntfy 应用](https://ntfy.sh/docs/subscribe/phone/)，点击 **+**，输入 `hermes-myname-2026`
+1. 选择一个 topic 名称：`Kova-myname-2026`
+2. 在手机上：安装 [ntfy 应用](https://ntfy.sh/docs/subscribe/phone/)，点击 **+**，输入 `Kova-myname-2026`
 3. 在主机上：
    ```bash
-   echo 'NTFY_TOPIC=hermes-myname-2026' >> ~/.kova/.env
-   echo 'NTFY_ALLOWED_USERS=hermes-myname-2026' >> ~/.kova/.env
+   echo 'NTFY_TOPIC=Kova-myname-2026' >> ~/.kova/.env
+   echo 'NTFY_ALLOWED_USERS=Kova-myname-2026' >> ~/.kova/.env
    kova gateway restart
    ```
 4. 从 ntfy 应用向该 topic 发送一条消息。agent 的回复将以推送通知的形式送达。

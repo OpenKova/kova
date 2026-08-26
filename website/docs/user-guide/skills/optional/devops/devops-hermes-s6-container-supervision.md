@@ -14,8 +14,8 @@ Modify or debug s6 services in the Kova Docker image.
 
 | | |
 |---|---|
-| Source | Optional — install with `kova skills install official/devops/hermes-s6-container-supervision` |
-| Path | `optional-skills/devops/hermes-s6-container-supervision` |
+| Source | Optional — install with `kova skills install official/devops/Kova-s6-container-supervision` |
+| Path | `optional-skills/devops/Kova-s6-container-supervision` |
 | Version | `1.0.0` |
 | Author | Kova Agent |
 | License | MIT |

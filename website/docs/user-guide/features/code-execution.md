@@ -13,7 +13,7 @@ The `execute_code` tool lets the agent write Python scripts that call Kova tools
 1. The agent writes a Python script using `from kova_tools import ...`
 2. Kova generates a `kova_tools.py` stub module with RPC functions
 3. Kova opens a Unix domain socket and starts an RPC listener thread
-4. The script runs in a child process — tool calls travel over the socket back to Hermes
+4. The script runs in a child process — tool calls travel over the socket back to Kova
 5. Only the script's `print()` output is returned to the LLM; intermediate tool results never enter the context window
 
 ```python

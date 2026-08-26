@@ -13,7 +13,7 @@ description: "通过 RPC 工具访问实现程序化 Python 执行——将多�
 1. Agent 编写使用 `from kova_tools import ...` 的 Python 脚本
 2. Kova 生成带有 RPC 函数的 `kova_tools.py` 存根模块
 3. Kova 打开 Unix 域套接字并启动 RPC 监听线程
-4. 脚本在子进程中运行——工具调用通过套接字传回 Hermes
+4. 脚本在子进程中运行——工具调用通过套接字传回 Kova
 5. 只有脚本的 `print()` 输出会返回给 LLM；中间工具结果不会进入上下文窗口
 
 ```python

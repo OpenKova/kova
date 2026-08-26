@@ -59,7 +59,7 @@ Any OpenAI-compatible app config takes the same triple:
 ```
 Base URL:   http://127.0.0.1:8645/v1
 API key:    anything (e.g. "sk-unused")
-Model:      Hermes-4-70B    # or Hermes-4.3-36B, Hermes-4-405B
+Model:      Kova-4-70B    # or Kova-4.3-36B, Kova-4-405B
 ```
 
 The proxy ignores the `Authorization` header from your app and attaches
@@ -122,7 +122,7 @@ Edit `~/.openviking/ov.conf`:
 {
   "vlm": {
     "provider": "openai",
-    "model": "Hermes-4-70B",
+    "model": "Kova-4-70B",
     "api_base": "http://127.0.0.1:8645/v1",
     "api_key": "unused-proxy-attaches-real-creds"
   }
@@ -153,7 +153,7 @@ bookmark summarization. In its config:
 # Karakeep .env
 OPENAI_API_BASE_URL=http://127.0.0.1:8645/v1
 OPENAI_API_KEY=any-non-empty-string
-INFERENCE_TEXT_MODEL=Hermes-4-70B
+INFERENCE_TEXT_MODEL=Kova-4-70B
 ```
 
 Same pattern works for Open WebUI, LobeChat, NextChat, or any other

@@ -118,9 +118,9 @@ Hey, search the web for "Kova Agent release notes" and summarize the top 3 hits.
 kova config set model.default anthropic/claude-sonnet-4.6
 ```
 
-### 不要在 agent 任务中使用 Hermes-4
+### 不要在 agent 任务中使用 Kova-4
 
-Hermes-4-70B 和 Hermes-4-405B 在 Portal 上以大幅折扣提供，但它们是**对话/推理模型**，并非针对工具调用优化的模型。它们在多步骤 agent 循环中表现不佳。请通过[订阅代理](/user-guide/features/subscription-proxy)从非 agent 工具中将它们用于对话或研究工作。对于 Kova Agent 本身，请坚持使用上述前沿 agentic 模型。
+Kova-4-70B 和 Kova-4-405B 在 Portal 上以大幅折扣提供，但它们是**对话/推理模型**，并非针对工具调用优化的模型。它们在多步骤 agent 循环中表现不佳。请通过[订阅代理](/user-guide/features/subscription-proxy)从非 agent 工具中将它们用于对话或研究工作。对于 Kova Agent 本身，请坚持使用上述前沿 agentic 模型。
 
 Portal 的[信息页面](https://portal.nousresearch.com/info)也有此说明——这是 Nous 官方指导，并非仅代表 Kova 一方的意见。
 
