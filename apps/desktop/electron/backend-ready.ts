@@ -3,7 +3,7 @@ import fs from 'node:fs'
 // `kova serve` announces KOVA_BACKEND_READY; the legacy `kova dashboard`
 // backend announces KOVA_DASHBOARD_READY. Accept either so the desktop spawn
 // works against both the headless backend and old/dashboard runtimes.
-const _READY_RE = /^HERMES_(?:BACKEND|DASHBOARD)_READY port=(\d+)/m
+const _READY_RE = /^(?:KOVA|HERMES)_(?:BACKEND|DASHBOARD)_READY port=(\d+)/m
 
 // The announcement clock starts the instant the backend process is spawned —
 // before uvicorn binds its socket. On a cold install the child must first

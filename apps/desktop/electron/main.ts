@@ -733,19 +733,12 @@ function resolveHermesHome() {
   }
 
   if (IS_WINDOWS && process.env.LOCALAPPDATA) {
-    const localappdata = path.join(process.env.LOCALAPPDATA, 'kova')
-    const legacy = path.join(app.getPath('home'), '.kova')
-
-    // Migrate transparently to LOCALAPPDATA, but honour an existing legacy
-    // ~/.kova setup (no LOCALAPPDATA install yet) so users don't lose state.
-    if (!directoryExists(localappdata) && directoryExists(legacy)) {
-      return legacy
-    }
-
-    return localappdata
+    // Kova owns a DEDICATED home, distinct from any legacy Hermes install.
+    // Never adopt those silently — import is explicit via `kova migrate import`.
+    return path.join(process.env.LOCALAPPDATA, 'KovaAgent')
   }
 
-  return path.join(app.getPath('home'), '.kova')
+  return path.join(app.getPath('home'), '.kova-agent')
 }
 
 const KOVA_HOME = resolveHermesHome()
