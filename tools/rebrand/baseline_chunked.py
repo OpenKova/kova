@@ -55,7 +55,7 @@ def main():
                     for s in ("acp", "acp_adapter", "agent", "cron", "gateway",
                               "kova_cli", "honcho_plugin", "integration",
                               "plugins", "tools", "ui_tui", "web")]
-        with open(LOG, "a") as lf:
+        with open(LOG, "a", encoding="utf-8") as lf:
             lf.write(f"\n===== CHUNK {d} ({time.strftime('%H:%M:%S')}) =====\n")
             lf.flush()
             subprocess.run(cmd, cwd=ROOT, stdout=lf, stderr=subprocess.STDOUT)

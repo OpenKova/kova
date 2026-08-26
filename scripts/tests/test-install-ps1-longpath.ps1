@@ -288,7 +288,7 @@ foreach ($name in @('TEMP', 'TMP', 'LOCALAPPDATA', 'APPDATA', 'USERPROFILE')) {
 # This is the difference between "the build works" and "the installer stops
 # claiming a successful build failed". Composed with literal backslashes
 # because that is how install.ps1 itself builds the default Windows path.
-$expectedInstallDir = "$($longRoot)${sep}AppData${sep}Local" + '\kova\kova-agent'
+$expectedInstallDir = "$($longRoot)${sep}AppData${sep}Local" + '\KovaAgent\kova-agent'
 Assert-Equal -Expected $expectedInstallDir -Actual $result.InstallDir -Label "InstallDir is re-derived from the long LOCALAPPDATA"
 
 Write-Host ""

@@ -8,7 +8,7 @@ STAGED = r"C:\Users\chira\kova-assets\staged"
 
 
 def sh(cmd):
-    r = subprocess.run(cmd, cwd=ROOT, shell=True, capture_output=True, text=True)
+    r = subprocess.run(cmd, cwd=ROOT, shell=True, capture_output=True, text=True, encoding="utf-8", errors="replace")
     out = (r.stdout + r.stderr).strip()
     print(f"$ {cmd[:70]}\n  {out[:200]}")
     return r.returncode
