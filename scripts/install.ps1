@@ -30,7 +30,7 @@ param(
     # existing tree pass -ForceCommit.
     [switch]$ForceCommit,
     [string]$Tag = "",
-    [string]$HermesHome = $(if ($env:KOVA_HOME) { $env:KOVA_HOME } else { "$env:LOCALAPPDATA\kova" }),
+    [string]$KovaHome = $(if ($env:KOVA_HOME) { $env:KOVA_HOME } else { "$env:LOCALAPPDATA\kova" }),
     [string]$InstallDir = $(if ($env:KOVA_HOME) { "$env:KOVA_HOME\kova-agent" } else { "$env:LOCALAPPDATA\kova\kova-agent" }),
 
     # --- Stage protocol (additive; default invocation behaves as before) ----
@@ -256,17 +256,17 @@ function ConvertTo-LongPath {
     # 1. kernel32. Compiled on first use only, so a normal profile never pays
     #    the Add-Type cost (this file is re-entered once per install stage).
     try {
-        if (-not ([System.Management.Automation.PSTypeName]'HermesInstall.LongPath').Type) {
-            Add-Type -Namespace 'HermesInstall' -Name 'LongPath' -MemberDefinition @'
+        if (-not ([System.Management.Automation.PSTypeName]'KovaInstall.LongPath').Type) {
+            Add-Type -Namespace 'KovaInstall' -Name 'LongPath' -MemberDefinition @'
 [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
 public static extern int GetLongPathNameW(string lpszShortPath, System.Text.StringBuilder lpszLongPath, int cchBuffer);
 '@
         }
         $buffer = New-Object System.Text.StringBuilder 4096
-        $length = [HermesInstall.LongPath]::GetLongPathNameW($Path, $buffer, $buffer.Capacity)
+        $length = [KovaInstall.LongPath]::GetLongPathNameW($Path, $buffer, $buffer.Capacity)
         if ($length -gt $buffer.Capacity) {
             $buffer = New-Object System.Text.StringBuilder $length
-            $length = [HermesInstall.LongPath]::GetLongPathNameW($Path, $buffer, $buffer.Capacity)
+            $length = [KovaInstall.LongPath]::GetLongPathNameW($Path, $buffer, $buffer.Capacity)
         }
         if ($length -gt 0) {
             $expanded = $buffer.ToString()
@@ -338,13 +338,13 @@ $script:LastResolver = 'none'
 $script:NormalizedProfilePaths = Set-LongProfileEnvVars
 
 # Re-derive the install paths now that the env vars behind their defaults are
-# long. An explicitly passed -HermesHome / -InstallDir is normalized in place
+# long. An explicitly passed -KovaHome / -InstallDir is normalized in place
 # rather than replaced, so a caller's choice is never overwritten by a default.
 # $PSBoundParameters is only meaningful at script scope, so this stays inline.
-if ($PSBoundParameters.ContainsKey('HermesHome')) {
-    $HermesHome = ConvertTo-LongPath $HermesHome
+if ($PSBoundParameters.ContainsKey('KovaHome')) {
+    $KovaHome = ConvertTo-LongPath $KovaHome
 } else {
-    $HermesHome = ConvertTo-LongPath $(
+    $KovaHome = ConvertTo-LongPath $(
         if ($env:KOVA_HOME) { $env:KOVA_HOME } else { "$env:LOCALAPPDATA\kova" }
     )
 }
@@ -358,7 +358,7 @@ if ($PSBoundParameters.ContainsKey('InstallDir')) {
 if ($script:NormalizedProfilePaths) {
     # Which paths the install actually settled on. Absent from every report of
     # this bug class, and the whole question once a short alias is in play.
-    Write-PathDiag "resolved install paths: HermesHome=$HermesHome InstallDir=$InstallDir"
+    Write-PathDiag "resolved install paths: HermesHome=$KovaHome InstallDir=$InstallDir"
 }
 
 # Captured here, where the values are final, and emitted from the entry-point
@@ -375,7 +375,7 @@ $script:ResolvedPathReport = @{
     normalized        = $script:NormalizedPathRewrites
     resolver          = $script:LastResolver
     temp              = $env:TEMP
-    kova_home       = $HermesHome
+    kova_home       = $KovaHome
     install_dir       = $InstallDir
 }
 
@@ -384,7 +384,7 @@ $script:ResolvedPathReport = @{
 # ============================================================================
 
 $RepoUrlSsh = "git@github.com:NousResearch/kova-agent.git"
-$RepoUrlHttps = "https://github.com/NousResearch/kova-agent.git"
+$RepoUrlHttps = "https://github.com/OpenKova/kova.git"
 $PythonVersion = "3.11"
 # Minor versions the installer accepts when the requested $PythonVersion isn't
 # available, in preference order.  uv discovers both uv-managed and system
@@ -649,10 +649,10 @@ function Find-SystemBrowser {
 
 function Write-BrowserEnv {
     param([string]$BrowserPath)
-    if (-not (Test-Path $HermesHome)) {
-        New-Item -ItemType Directory -Force -Path $HermesHome | Out-Null
+    if (-not (Test-Path $KovaHome)) {
+        New-Item -ItemType Directory -Force -Path $KovaHome | Out-Null
     }
-    $envFile = Join-Path $HermesHome ".env"
+    $envFile = Join-Path $KovaHome ".env"
     if (-not (Test-Path $envFile)) {
         Set-Content -Path $envFile -Value "AGENT_BROWSER_EXECUTABLE_PATH=$BrowserPath" -Encoding UTF8
         return
@@ -678,7 +678,7 @@ function Install-AgentBrowser {
     # complexity and an extra credential/supply-chain surface for a path
     # npx already covers.
     Write-Info "Installing camofox browser server..."
-    $prefixDir = Join-Path $HermesHome "node"
+    $prefixDir = Join-Path $KovaHome "node"
     if (-not (Test-Path $prefixDir)) {
         New-Item -ItemType Directory -Path $prefixDir -Force | Out-Null
     }
@@ -743,11 +743,11 @@ function Get-PowerShellHostExe {
 }
 
 function Install-Uv {
-    # Kova owns its own uv at $HermesHome\bin\uv.exe.  Always install there --
+    # Kova owns its own uv at $KovaHome\bin\uv.exe.  Always install there --
     # no PATH probing, no conda guards, no multi-location resolution chains.
     # The runtime update path (kova_cli/managed_uv.py) looks in the same
     # place, so install.ps1 and `kova update` stay in sync.
-    $managedUv = Join-Path $HermesHome "bin\uv.exe"
+    $managedUv = Join-Path $KovaHome "bin\uv.exe"
 
     if (Test-Path $managedUv) {
         $script:UvCmd = $managedUv
@@ -756,15 +756,15 @@ function Install-Uv {
         return $true
     }
 
-    Write-Info "Installing managed uv into $HermesHome\bin ..."
-    New-Item -ItemType Directory -Path (Join-Path $HermesHome "bin") -Force | Out-Null
+    Write-Info "Installing managed uv into $KovaHome\bin ..."
+    New-Item -ItemType Directory -Path (Join-Path $KovaHome "bin") -Force | Out-Null
 
     # UV_INSTALL_DIR tells the astral installer to place the binary
-    # directly into $HermesHome\bin instead of ~/.local/bin.
+    # directly into $KovaHome\bin instead of ~/.local/bin.
     $prevEAP = $ErrorActionPreference
     try {
         $ErrorActionPreference = "Continue"
-        $env:UV_INSTALL_DIR = Join-Path $HermesHome "bin"
+        $env:UV_INSTALL_DIR = Join-Path $KovaHome "bin"
         # Spawn via the resolved host exe (see Get-PowerShellHostExe) rather
         # than a bare `powershell`, which isn't guaranteed to be on PATH under
         # PowerShell 7 / pwsh-only setups.
@@ -802,7 +802,7 @@ function Install-Uv {
         # on PATH, or at ~/.local/bin (the astral default location when
         # UV_INSTALL_DIR was ignored by an older installer) -- copy it into
         # the managed location so the managed-first invariant holds
-        # (kova_cli/managed_uv.py looks only at $HermesHome\bin\uv.exe).
+        # (kova_cli/managed_uv.py looks only at $KovaHome\bin\uv.exe).
         if (-not (Test-Path $managedUv)) {
             $existingUv = $null
             $uvOnPath = Get-Command uv -CommandType Application -ErrorAction SilentlyContinue |
@@ -1068,7 +1068,7 @@ function Resolve-UvCmd {
     }
 
     # Check the managed location first -- this is where Install-Uv puts it.
-    $managedUv = Join-Path $HermesHome "bin\uv.exe"
+    $managedUv = Join-Path $KovaHome "bin\uv.exe"
     if (Test-Path $managedUv) {
         $script:UvCmd = $managedUv
         return
@@ -1381,10 +1381,10 @@ function Install-Git {
         Write-Info "Trying a Kova-managed PortableGit install instead..."
     }
 
-    # Download PortableGit into $HermesHome\git.  Always works as long as
+    # Download PortableGit into $KovaHome\git.  Always works as long as
     # we can reach github.com -- no admin, no winget, no reliance on the
     # user's possibly-broken system Git install.
-    Write-Info "Git not found -- downloading PortableGit to $HermesHome\git\ ..."
+    Write-Info "Git not found -- downloading PortableGit to $KovaHome\git\ ..."
     Write-Info "(no admin rights required; isolated from any system Git install)"
 
     try {
@@ -1428,7 +1428,7 @@ function Install-Git {
         $downloadUrl = "https://github.com/git-for-windows/git/releases/download/$gitTag/$assetName"
         $downloadExt = if ($downloadIsZip) { "zip" } else { "7z.exe" }
         $tmpFile = "$env:TEMP\$assetName"
-        $gitDir = "$HermesHome\git"
+        $gitDir = "$KovaHome\git"
 
         Write-Info "Downloading $assetName (Git for Windows $gitVerTag)..."
         Invoke-WebRequest -Uri $downloadUrl -OutFile $tmpFile -UseBasicParsing
@@ -1533,10 +1533,10 @@ function Set-GitBashEnvVar {
     # this with a system-Git-only installation anyway.
     #
     # Layouts:
-    #   PortableGit (our default): $HermesHome\git\bin\bash.exe
-    #   MinGit (32-bit fallback):  $HermesHome\git\usr\bin\bash.exe
-    $candidates += "$HermesHome\git\bin\bash.exe"       # PortableGit layout (primary)
-    $candidates += "$HermesHome\git\usr\bin\bash.exe"   # MinGit / PortableGit usr\bin fallback
+    #   PortableGit (our default): $KovaHome\git\bin\bash.exe
+    #   MinGit (32-bit fallback):  $KovaHome\git\usr\bin\bash.exe
+    $candidates += "$KovaHome\git\bin\bash.exe"       # PortableGit layout (primary)
+    $candidates += "$KovaHome\git\usr\bin\bash.exe"   # MinGit / PortableGit usr\bin fallback
 
     # git.exe on PATH can tell us where the install root is
     $gitCmd = Get-Command git -ErrorAction SilentlyContinue
@@ -1602,16 +1602,16 @@ function Test-Node {
     }
 
     # Prefer a Kova-managed Node from a previous run over a too-old system one.
-    $managedNode = "$HermesHome\node\node.exe"
+    $managedNode = "$KovaHome\node\node.exe"
     if ((Test-Path $managedNode) -and (Test-NodeVersionOk (& $managedNode --version))) {
         $version = & $managedNode --version
-        $env:Path = "$HermesHome\node;$env:Path"
-        Set-ManagedNodeFirstOnUserPath "$HermesHome\node"
+        $env:Path = "$KovaHome\node;$env:Path"
+        Set-ManagedNodeFirstOnUserPath "$KovaHome\node"
         Write-Success "Node.js $version found (Kova-managed)"
         # A tree from an older install still has that Node major's bundled
         # npm, which is below the current engines.npm floor. No-ops when the
         # npm is already in range, so reruns cost one --version probe.
-        Update-ManagedNpm "$HermesHome\node" | Out-Null
+        Update-ManagedNpm "$KovaHome\node" | Out-Null
         $script:HasNode = $true
         return $true
     }
@@ -1622,11 +1622,11 @@ function Test-Node {
     # winget install OpenJS.NodeJS.LTS triggers a system-wide MSI install
     # which prompts UAC (the dialog often appears minimized in the taskbar
     # and the install silently waits for consent, looking like a hang).
-    # The portable zip path drops node.exe + npm into $HermesHome\node\
+    # The portable zip path drops node.exe + npm into $KovaHome\node\
     # which is user-scoped and identical to how Install-Git handles
     # PortableGit.  Same UX guarantee: works on locked-down enterprise
     # machines with no admin rights.
-    Write-Info "Downloading portable Node.js $NodeVersion to $HermesHome\node\ ..."
+    Write-Info "Downloading portable Node.js $NodeVersion to $KovaHome\node\ ..."
     Write-Info "(no admin rights required; isolated from any system Node install)"
     try {
         $arch = Get-WindowsArch
@@ -1655,15 +1655,15 @@ function Test-Node {
                 # runs; locked files simply stay for the next attempt.  Only
                 # dirs older than 10 minutes are removed so a concurrent
                 # heal's in-flight swap is never disturbed.
-                Get-ChildItem "$HermesHome" -Directory -Filter "node.old-*" -ErrorAction SilentlyContinue |
+                Get-ChildItem "$KovaHome" -Directory -Filter "node.old-*" -ErrorAction SilentlyContinue |
                     Where-Object { $_.LastWriteTime -lt (Get-Date).AddMinutes(-10) } |
                     Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-                Get-ChildItem "$HermesHome" -Directory -Filter "node.new-*" -ErrorAction SilentlyContinue |
+                Get-ChildItem "$KovaHome" -Directory -Filter "node.new-*" -ErrorAction SilentlyContinue |
                     Where-Object { $_.LastWriteTime -lt (Get-Date).AddMinutes(-10) } |
                     Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
                 $stamp = [Guid]::NewGuid().ToString("N")
-                $staged = "$HermesHome\node.new-$stamp"
-                $backup = "$HermesHome\node.old-$stamp"
+                $staged = "$KovaHome\node.new-$stamp"
+                $backup = "$KovaHome\node.old-$stamp"
                 # Stage to a sibling directory so the final swap is a
                 # same-volume rename (atomic), not a cross-volume Move-Item
                 # (copy+delete, non-atomic -- a partial copy would leave a
@@ -1676,9 +1676,9 @@ function Test-Node {
                     Remove-Item -Force $tmpZip -ErrorAction SilentlyContinue
                     return $false
                 }
-                if (Test-Path "$HermesHome\node") {
+                if (Test-Path "$KovaHome\node") {
                     try {
-                        Rename-Item "$HermesHome\node" $backup -ErrorAction Stop
+                        Rename-Item "$KovaHome\node" $backup -ErrorAction Stop
                     } catch {
                         Write-Warn "Kova-managed Node.js is in use by a running app; deferring its upgrade. Close the app and re-run the update."
                         Remove-Item -Recurse -Force $staged -ErrorAction SilentlyContinue
@@ -1694,12 +1694,12 @@ function Test-Node {
                         (Get-Item $backup).LastWriteTime = Get-Date
                     } catch { }
                     try {
-                        Rename-Item $staged "$HermesHome\node" -ErrorAction Stop
+                        Rename-Item $staged "$KovaHome\node" -ErrorAction Stop
                     } catch {
                         # Restore the live tree before bailing.  The swap is a
                         # same-volume rename, so a failure leaves no partial
                         # target to clear.
-                        Rename-Item $backup "$HermesHome\node" -ErrorAction SilentlyContinue
+                        Rename-Item $backup "$KovaHome\node" -ErrorAction SilentlyContinue
                         Remove-Item -Recurse -Force $staged -ErrorAction SilentlyContinue
                         Remove-Item -Recurse -Force $tmpDir -ErrorAction SilentlyContinue
                         Remove-Item -Force $tmpZip -ErrorAction SilentlyContinue
@@ -1708,7 +1708,7 @@ function Test-Node {
                     Remove-Item -Recurse -Force $backup -ErrorAction SilentlyContinue
                 } else {
                     try {
-                        Rename-Item $staged "$HermesHome\node" -ErrorAction Stop
+                        Rename-Item $staged "$KovaHome\node" -ErrorAction Stop
                     } catch {
                         Remove-Item -Recurse -Force $staged -ErrorAction SilentlyContinue
                         Remove-Item -Recurse -Force $tmpDir -ErrorAction SilentlyContinue
@@ -1718,19 +1718,19 @@ function Test-Node {
                 }
 
                 # Session PATH so the rest of this run sees node/npm.
-                $env:Path = "$HermesHome\node;$env:Path"
+                $env:Path = "$KovaHome\node;$env:Path"
 
                 # Persist to User PATH so fresh shells (and future stages
                 # in cross-process driver mode) see it.  Matches the
                 # pattern Install-Git uses for PortableGit.  See
                 # Set-ManagedNodeFirstOnUserPath for why this is a
                 # move-to-front and not an add-if-missing.
-                Set-ManagedNodeFirstOnUserPath "$HermesHome\node"
+                Set-ManagedNodeFirstOnUserPath "$KovaHome\node"
 
-                $version = & "$HermesHome\node\node.exe" --version
-                Write-Success "Node.js $version installed to $HermesHome\node\ (portable, user-scoped)"
+                $version = & "$KovaHome\node\node.exe" --version
+                Write-Success "Node.js $version installed to $KovaHome\node\ (portable, user-scoped)"
                 # The zip's bundled npm is below the repo's engines.npm floor.
-                Update-ManagedNpm "$HermesHome\node" | Out-Null
+                Update-ManagedNpm "$KovaHome\node" | Out-Null
                 $script:HasNode = $true
 
                 Remove-Item -Force $tmpZip -ErrorAction SilentlyContinue
@@ -2281,13 +2281,13 @@ function Install-Repository {
                 # for.  GitHub supports archive URLs for commits, tags, and
                 # branches; we honour Commit > Tag > Branch.
                 if ($Commit) {
-                    $zipUrl = "https://github.com/NousResearch/kova-agent/archive/$Commit.zip"
+                    $zipUrl = "https://github.com/OpenKova/kova/archive/$Commit.zip"
                     $zipLabel = $Commit
                 } elseif ($Tag) {
-                    $zipUrl = "https://github.com/NousResearch/kova-agent/archive/refs/tags/$Tag.zip"
+                    $zipUrl = "https://github.com/OpenKova/kova/archive/refs/tags/$Tag.zip"
                     $zipLabel = $Tag
                 } else {
-                    $zipUrl = "https://github.com/NousResearch/kova-agent/archive/refs/heads/$Branch.zip"
+                    $zipUrl = "https://github.com/OpenKova/kova/archive/refs/heads/$Branch.zip"
                     $zipLabel = $Branch
                 }
                 $zipPath = "$env:TEMP\kova-agent-$zipLabel.zip"
@@ -2467,7 +2467,7 @@ function Install-Venv {
             # on failure -- but only for tasks that were enabled to begin with.
             # Best-effort: a missing task just errors quietly.
             try {
-                schtasks /Query /FO CSV 2>$null | ConvertFrom-Csv | Where-Object { $_.TaskName -like '*Hermes_Gateway*' } | ForEach-Object {
+                schtasks /Query /FO CSV 2>$null | ConvertFrom-Csv | Where-Object { $_.TaskName -like '*Kova_Gateway*' } | ForEach-Object {
                     $tn = $_.TaskName
                     if ($_.Status -eq 'Disabled') {
                         Write-Info "  gateway autostart task $tn is already disabled; leaving it that way"
@@ -2986,7 +2986,7 @@ print(','.join(scripts))
     Write-Success "All dependencies installed"
 }
 
-function Install-HermesCommandLaunchers {
+function Install-KovaCommandLaunchers {
     param(
         [Parameter(Mandatory=$true)] [string]$Root,
         [Parameter(Mandatory=$true)] [string]$Destination
@@ -3043,18 +3043,18 @@ function Set-PathVariable {
     Write-Info "Setting up kova command..."
     
     if ($NoVenv) {
-        $hermesBin = "$InstallDir"
+        $kovaBin = "$InstallDir"
     } else {
-        # $HermesHome\bin is the managed binary dir (shared with the managed
+        # $KovaHome\bin is the managed binary dir (shared with the managed
         # uv), OUTSIDE the git checkout: `kova update`'s autostash
         # (git stash push --include-untracked) deletes untracked files from
         # the working tree, which silently removed the launchers an earlier
         # installer staged under kova-agent\bin. No git operation can ever
         # touch this dir. Staging and verification live in
-        # Install-HermesCommandLaunchers, which throws BEFORE any PATH
+        # Install-KovaCommandLaunchers, which throws BEFORE any PATH
         # mutation when the launchers cannot be staged.
-        $hermesBin = "$HermesHome\bin"
-        Install-HermesCommandLaunchers -Root $InstallDir -Destination $hermesBin | Out-Null
+        $kovaBin = "$KovaHome\bin"
+        Install-KovaCommandLaunchers -Root $InstallDir -Destination $kovaBin | Out-Null
     }
     
     $currentPath = [Environment]::GetEnvironmentVariable("Path", "User")
@@ -3073,17 +3073,17 @@ function Set-PathVariable {
         if ($cleaned.Count -ne $items.Count) {
             $currentPath = $cleaned -join ";"
             [Environment]::SetEnvironmentVariable("Path", $currentPath, "User")
-            Write-Info "Removed legacy launcher entries from user PATH (kept kova via $hermesBin)"
+            Write-Info "Removed legacy launcher entries from user PATH (kept kova via $kovaBin)"
         }
     }
     
-    if ($currentPath -notlike "*$hermesBin*") {
+    if ($currentPath -notlike "*$kovaBin*") {
         [Environment]::SetEnvironmentVariable(
             "Path",
-            "$hermesBin;$currentPath",
+            "$kovaBin;$currentPath",
             "User"
         )
-        Write-Success "Added to user PATH: $hermesBin"
+        Write-Success "Added to user PATH: $kovaBin"
     } else {
         Write-Info "PATH already configured"
     }
@@ -3091,15 +3091,15 @@ function Set-PathVariable {
     # Set KOVA_HOME so the Python code finds config/data in the right place.
     # Only needed on Windows where we install to %LOCALAPPDATA%\kova instead
     # of the Unix default ~/.kova
-    $currentHermesHome = [Environment]::GetEnvironmentVariable("KOVA_HOME", "User")
-    if (-not $currentHermesHome -or $currentHermesHome -ne $HermesHome) {
-        [Environment]::SetEnvironmentVariable("KOVA_HOME", $HermesHome, "User")
-        Write-Success "Set KOVA_HOME=$HermesHome"
+    $currentKovaHome = [Environment]::GetEnvironmentVariable("KOVA_HOME", "User")
+    if (-not $currentKovaHome -or $currentKovaHome -ne $KovaHome) {
+        [Environment]::SetEnvironmentVariable("KOVA_HOME", $KovaHome, "User")
+        Write-Success "Set KOVA_HOME=$KovaHome"
     }
-    $env:KOVA_HOME = $HermesHome
+    $env:KOVA_HOME = $KovaHome
     
     # Update current session
-    $env:Path = "$hermesBin;$env:Path"
+    $env:Path = "$kovaBin;$env:Path"
     
     Write-Success "kova command ready"
 }
@@ -3184,20 +3184,20 @@ function Write-BootstrapMarker {
 function Copy-ConfigTemplates {
     Write-Info "Setting up configuration files..."
     
-    # Create the KOVA_HOME directory structure ($HermesHome, default %LOCALAPPDATA%\kova)
-    New-Item -ItemType Directory -Force -Path "$HermesHome\cron" | Out-Null
-    New-Item -ItemType Directory -Force -Path "$HermesHome\sessions" | Out-Null
-    New-Item -ItemType Directory -Force -Path "$HermesHome\logs" | Out-Null
-    New-Item -ItemType Directory -Force -Path "$HermesHome\pairing" | Out-Null
-    New-Item -ItemType Directory -Force -Path "$HermesHome\hooks" | Out-Null
-    New-Item -ItemType Directory -Force -Path "$HermesHome\image_cache" | Out-Null
-    New-Item -ItemType Directory -Force -Path "$HermesHome\audio_cache" | Out-Null
-    New-Item -ItemType Directory -Force -Path "$HermesHome\memories" | Out-Null
-    New-Item -ItemType Directory -Force -Path "$HermesHome\skills" | Out-Null
+    # Create the KOVA_HOME directory structure ($KovaHome, default %LOCALAPPDATA%\kova)
+    New-Item -ItemType Directory -Force -Path "$KovaHome\cron" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$KovaHome\sessions" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$KovaHome\logs" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$KovaHome\pairing" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$KovaHome\hooks" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$KovaHome\image_cache" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$KovaHome\audio_cache" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$KovaHome\memories" | Out-Null
+    New-Item -ItemType Directory -Force -Path "$KovaHome\skills" | Out-Null
 
     
     # Create .env
-    $envPath = "$HermesHome\.env"
+    $envPath = "$KovaHome\.env"
     if (-not (Test-Path $envPath)) {
         $examplePath = "$InstallDir\.env.example"
         if (Test-Path $examplePath) {
@@ -3212,7 +3212,7 @@ function Copy-ConfigTemplates {
     }
     
     # Create config.yaml
-    $configPath = "$HermesHome\config.yaml"
+    $configPath = "$KovaHome\config.yaml"
     if (-not (Test-Path $configPath)) {
         $examplePath = "$InstallDir\cli-config.yaml.example"
         if (Test-Path $examplePath) {
@@ -3232,7 +3232,7 @@ function Copy-ConfigTemplates {
     # don't control which PowerShell version the user has.  Go direct
     # to .NET with an explicit UTF8Encoding($false) -- BOM-free on every
     # PowerShell version.
-    $soulPath = "$HermesHome\SOUL.md"
+    $soulPath = "$KovaHome\SOUL.md"
     if (-not (Test-Path $soulPath)) {
         # MUST match DEFAULT_SOUL_MD in kova_cli/default_soul.py. The runtime
         # upgrades the old comment-only scaffold to this text on next run, so
@@ -3245,10 +3245,10 @@ You are Kova Agent, an intelligent AI assistant created by Neural Studio. You ar
         Write-Success "Created $soulPath (edit to customize personality)"
     }
     
-    Write-Success "Configuration directory ready: $HermesHome"
+    Write-Success "Configuration directory ready: $KovaHome"
     
-    # Seed bundled skills into $HermesHome\skills (manifest-based, one-time per skill)
-    Write-Info "Syncing bundled skills to $HermesHome\skills ..."
+    # Seed bundled skills into $KovaHome\skills (manifest-based, one-time per skill)
+    Write-Info "Syncing bundled skills to $KovaHome\skills ..."
     $pythonExe = "$InstallDir\venv\Scripts\python.exe"
     if (Test-Path $pythonExe) {
         try {
@@ -3269,14 +3269,14 @@ You are Kova Agent, an intelligent AI assistant created by Neural Studio. You ar
                 $env:PYTHONIOENCODING = $prevPythonioencoding
                 $env:PYTHONUTF8 = $prevPythonutf8
             }
-            Write-Success "Skills synced to $HermesHome\skills"
+            Write-Success "Skills synced to $KovaHome\skills"
         } catch {
             # Fallback: simple directory copy
             $bundledSkills = "$InstallDir\skills"
-            $userSkills = "$HermesHome\skills"
+            $userSkills = "$KovaHome\skills"
             if ((Test-Path $bundledSkills) -and -not (Get-ChildItem $userSkills -Exclude '.bundled_manifest' -ErrorAction SilentlyContinue)) {
                 Copy-Item -Path "$bundledSkills\*" -Destination $userSkills -Recurse -Force -ErrorAction SilentlyContinue
-                Write-Success "Skills copied to $HermesHome\skills"
+                Write-Success "Skills copied to $KovaHome\skills"
             }
         }
     }
@@ -3581,7 +3581,7 @@ function Install-BrowserUseCli {
         Write-Info "Skipping Browser Use CLI install (uv unavailable)"
         return
     }
-    $managedBin = Join-Path $HermesHome "bin"
+    $managedBin = Join-Path $KovaHome "bin"
     $managedBu = Join-Path $managedBin "browser-use.exe"
     # MANAGED-FIRST: only Kova' managed copy short-circuits. A browser-use
     # on the user's PATH is a side install -- resolution prefers the managed
@@ -4256,7 +4256,7 @@ function Install-PlatformSdks {
         return
     }
 
-    $envPath = "$HermesHome\.env"
+    $envPath = "$KovaHome\.env"
     if (-not (Test-Path $envPath)) { return }
     $envLines = Get-Content $envPath -ErrorAction SilentlyContinue
 
@@ -4369,7 +4369,7 @@ function Invoke-SetupWizard {
 }
 
 function Start-GatewayIfConfigured {
-    $envPath = "$HermesHome\.env"
+    $envPath = "$KovaHome\.env"
     if (-not (Test-Path $envPath)) { return }
 
     $hasMessaging = $false
@@ -4381,14 +4381,14 @@ function Start-GatewayIfConfigured {
 
     if (-not $hasMessaging) { return }
 
-    $hermesCmd = "$InstallDir\venv\Scripts\kova.exe"
-    if (-not (Test-Path $hermesCmd)) {
-        $hermesCmd = "kova"
+    $kovaCmd = "$InstallDir\venv\Scripts\kova.exe"
+    if (-not (Test-Path $kovaCmd)) {
+        $kovaCmd = "kova"
     }
 
     # If WhatsApp is enabled but not yet paired, run foreground for QR scan
     $whatsappEnabled = $content | Where-Object { $_ -match "^WHATSAPP_ENABLED=true" }
-    $whatsappSession = "$HermesHome\whatsapp\session\creds.json"
+    $whatsappSession = "$KovaHome\whatsapp\session\creds.json"
     if ($whatsappEnabled -and -not (Test-Path $whatsappSession)) {
         Write-Host ""
         Write-Info "WhatsApp is enabled but not yet paired."
@@ -4401,7 +4401,7 @@ function Start-GatewayIfConfigured {
             $response = Read-Host "Pair WhatsApp now? [Y/n]"
             if ($response -eq "" -or $response -match "^[Yy]") {
                 try {
-                    & $hermesCmd whatsapp
+                    & $kovaCmd whatsapp
                 } catch {
                     # Expected after pairing completes
                 }
@@ -4430,10 +4430,10 @@ function Start-GatewayIfConfigured {
     if ($response -eq "" -or $response -match "^[Yy]") {
         Write-Info "Starting gateway in background..."
         try {
-            $logFile = "$HermesHome\logs\gateway.log"
-            Start-Process -FilePath $hermesCmd -ArgumentList "gateway" `
+            $logFile = "$KovaHome\logs\gateway.log"
+            Start-Process -FilePath $kovaCmd -ArgumentList "gateway" `
                 -RedirectStandardOutput $logFile `
-                -RedirectStandardError "$HermesHome\logs\gateway-error.log" `
+                -RedirectStandardError "$KovaHome\logs\gateway-error.log" `
                 -WindowStyle Hidden
             Write-Success "Gateway started! Your bot is now online."
             Write-Info "Logs: $logFile"
@@ -4457,13 +4457,13 @@ function Write-Completion {
     Write-Host "* Your files:" -ForegroundColor Cyan
     Write-Host ""
     Write-Host "   Config:    " -NoNewline -ForegroundColor Yellow
-    Write-Host "$HermesHome\config.yaml"
+    Write-Host "$KovaHome\config.yaml"
     Write-Host "   API Keys:  " -NoNewline -ForegroundColor Yellow
-    Write-Host "$HermesHome\.env"
+    Write-Host "$KovaHome\.env"
     Write-Host "   Data:      " -NoNewline -ForegroundColor Yellow
-    Write-Host "$HermesHome\cron\, sessions\, logs\"
+    Write-Host "$KovaHome\cron\, sessions\, logs\"
     Write-Host "   Code:      " -NoNewline -ForegroundColor Yellow
-    Write-Host "$HermesHome\kova-agent\"
+    Write-Host "$KovaHome\kova-agent\"
     Write-Host ""
     
     Write-Host "---------------------------------------------------------" -ForegroundColor Cyan
