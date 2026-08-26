@@ -69,20 +69,31 @@
 :root.dark {
   color-scheme: dark;
 
-  --theme-foreground: #ffe6cb;
-  --theme-primary: #ffe6cb;
-  --theme-secondary: #1b45a4;
-  --theme-accent-soft: #1540b1;
-  --theme-midground: #0053fd;
-  --theme-warm: #ffe6cb;
-  --theme-background-seed: #0d2f86;
-  --theme-sidebar-seed: #09286f;
-  --theme-card-seed: #12378f;
-  --theme-elevated-seed: #123a96;
-  --theme-bubble-seed: #143b91;
+  /* Kova dark appearance — near-black chrome, orange accent (mirrors
+     kovaTheme.darkColors in apps/desktop's presets.ts). */
+  --theme-foreground: #fdba74;
+  --theme-primary: #ea580c;
+  --theme-secondary: color-mix(in srgb, #ea580c 14%, #0a0a0a);
+  --theme-accent-soft: color-mix(in srgb, #ea580c 10%, #0a0a0a);
+  --theme-midground: #ea580c;
+  --theme-warm: #fdba74;
+  --theme-background-seed: #0a0a0a;
+  --theme-sidebar-seed: #111110;
+  --theme-card-seed: #171614;
+  --theme-elevated-seed: #1c1a17;
+  --theme-bubble-seed: color-mix(in srgb, #ea580c 7%, #141311);
 
-  /* Non-derived shadcn tokens applyTheme() paints inline (Nous dark values). */
-  --dt-primary-foreground: #0d2f86;
-  --dt-destructive: #c0473a;
+  /* Non-derived shadcn tokens applyTheme() paints inline (Kova dark values). */
+  --dt-primary-foreground: #fff7ed;
+  --dt-destructive: #dc2626;
   --dt-destructive-foreground: #fef2f2;
+}
+
+
+/* Installer-only stroke token (renamed from the upstream nous name). */
+:root {
+  --stroke-kova: color-mix(in srgb, #ea580c 22%, #e7e5e4);
+}
+:root.dark {
+  --stroke-kova: color-mix(in srgb, #ea580c 30%, #262626);
 }

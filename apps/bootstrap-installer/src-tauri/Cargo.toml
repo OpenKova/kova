@@ -2,7 +2,7 @@
 name = "kova-bootstrap"
 version = "0.0.1"
 description = "Kova Setup — signed installer that drives scripts/install.ps1"
-authors = ["Neural Studio <info@nousresearch.com>"]
+authors = ["Neural Studio <neuralstudio.in@gmail.com>"]
 edition = "2021"
 rust-version = "1.77"
 
