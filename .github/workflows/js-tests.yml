@@ -7,14 +7,16 @@ on:
 jobs:
   check:
     name: JS & TS checks
-    # One 32-core job replaces a 14-leg matrix. The matrix spread about 612s
-    # of check payload over 4-core runners. It paid about 371s of repeated
-    # setup to do it: 14 checkouts, 14 node installs, 14 node_modules
-    # restores.
+    # One job replaces a 14-leg matrix (the matrix paid ~371s of repeated
+    # setup for ~612s of check payload). A single runner installs once; vitest,
+    # tsc and eslint size their own worker pools from the core count.
     #
-    # One larger runner installs one time. vitest, tsc and eslint each size
-    # their own worker pool from the core count.
-    runs-on: ubuntu-latest-32-core
+    # NOTE: was `ubuntu-latest-32-core` for speed, but the large-runner pool is
+    # scarce and parks in queue after GitHub Actions outages. Standard
+    # `ubuntu-latest` starts immediately. To restore the faster big-runner run,
+    # set this back to `ubuntu-latest-32-core` (and the matching labels in
+    # tests.yml / nix.yml).
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
