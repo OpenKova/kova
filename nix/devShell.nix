@@ -25,7 +25,7 @@
         packages = with pkgs; [
           (pkgs.runCommand "kova" { } ''
             mkdir -p $out/bin
-            install -Dm755 ${../kova} $out/bin/kova
+            ln -s ${self'.packages.default}/bin/kova $out/bin/kova
           '')
           self'.packages.sandbox
           uv
