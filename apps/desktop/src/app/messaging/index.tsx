@@ -11,6 +11,7 @@ import { ErrorBanner } from '@/components/ui/error-state'
 import { Input } from '@/components/ui/input'
 import { Switch } from '@/components/ui/switch'
 import { Tip } from '@/components/ui/tooltip'
+import { type Translations, useI18n } from '@/i18n'
 import {
   approvePairing,
   getMessagingPlatforms,
@@ -21,7 +22,6 @@ import {
   revokePairing,
   updateMessagingPlatform
 } from '@/kova'
-import { type Translations, useI18n } from '@/i18n'
 import { openExternalLink } from '@/lib/external-link'
 import { ExternalLink, Save, Trash2 } from '@/lib/icons'
 import { normalize } from '@/lib/text'

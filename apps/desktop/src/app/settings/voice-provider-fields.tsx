@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
-import { getElevenLabsVoices, getHermesConfigSchema, saveHermesConfig } from '@/kova'
 import { useI18n } from '@/i18n'
+import { getElevenLabsVoices, getHermesConfigSchema, saveHermesConfig } from '@/kova'
 import { notifyError } from '@/store/notifications'
 import type { HermesConfigRecord } from '@/types/kova'
 

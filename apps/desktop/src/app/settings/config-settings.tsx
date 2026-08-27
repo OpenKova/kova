@@ -6,8 +6,8 @@ import { useSearchParams } from 'react-router'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { getElevenLabsVoices, getHermesConfigSchema, saveHermesConfig } from '@/kova'
 import { useI18n } from '@/i18n'
+import { getElevenLabsVoices, getHermesConfigSchema, saveHermesConfig } from '@/kova'
 import { triggerHaptic } from '@/lib/haptics'
 import { confirm } from '@/store/confirm'
 import {

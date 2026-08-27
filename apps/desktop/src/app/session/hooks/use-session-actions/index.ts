@@ -6,8 +6,8 @@ import { NO_PROJECT_ID } from '@/app/chat/sidebar/projects/workspace-groups'
 import { graftRefreshedTailOntoBackfill } from '@/app/chat/transcript-backfill'
 import { revealTreePane } from '@/components/pane-shell/tree/store'
 import { setWorkspaceScope } from '@/components/pane-shell/workspace-scope'
-import { deleteSession, getAllSessionMessages, getLatestSessionMessages, setSessionArchived } from '@/kova'
 import { useI18n } from '@/i18n'
+import { deleteSession, getAllSessionMessages, getLatestSessionMessages, setSessionArchived } from '@/kova'
 import {
   type ChatMessage,
   preserveLocalAssistantErrors,
