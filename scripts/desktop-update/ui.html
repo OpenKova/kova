@@ -24,18 +24,12 @@
 <head>
 <meta charset="utf-8">
 <title>Kova</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23232323'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23d6d6d6'%3E%E2%97%88%3C/text%3E%3C/svg%3E" />
 <style>
   :root {
-    --background: #ffffff;
-    --foreground: #1a1a1a;
-    --muted-foreground: #737373;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #232323;
-      --foreground: #d6d6d6;
-      --muted-foreground: #8a8a8a;
-    }
+    --background: #232323;
+    --foreground: #d6d6d6;
+    --muted-foreground: #8a8a8a;
   }
   html, body {
     margin: 0;
@@ -68,6 +62,15 @@
   .wrap { animation: kova-fade-in 0.45s ease-out both; }
   /* Loader size-20 (5rem); svg overflow-visible; curve path opacity .1 */
   #loader { width: 80px; height: 80px; color: var(--foreground); }
+  /* Fallback glyph: shown only if the Fourier SVG fails to paint (e.g. the
+     renderer blocked the inline <svg> build). Guarantees the window is never a
+     blank box — a spinner-free but readable "Updating Kova" state. */
+  #loader.fallback::after {
+    content: "◈";
+    font-size: 48px;
+    line-height: 80px;
+    color: var(--foreground);
+  }
   #loader svg { width: 100%; height: 100%; overflow: visible; }
   #glyph {
     width: 80px;
@@ -175,6 +178,15 @@
     return c
   })
   document.getElementById('loader').appendChild(svg)
+
+  // Safety net: if the SVG didn't actually attach (renderer blocked the
+  // inline build, or requestAnimationFrame never fired), show the CSS fallback
+  // glyph so the window is never a blank box.
+  setTimeout(() => {
+    if (!svg.isConnected || svg.childNodes.length === 0) {
+      document.getElementById('loader').classList.add('fallback')
+    }
+  }, 1200)
 
   let frame = 0
   const startedAt = performance.now()
