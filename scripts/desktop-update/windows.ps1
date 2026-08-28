@@ -136,6 +136,7 @@ function Get-DefaultBrowserExe {
     $family = switch ($progId) {
         "ChromeHTML" { "Google\Chrome\Application\chrome.exe" }
         "MSEdgeHTM"  { "Microsoft\Edge\Application\msedge.exe" }
+        "BraveHTML"  { "BraveSoftware\Brave-Browser\Application\brave.exe" }
         default      { $null }
     }
     if (-not $family) { return $null }
@@ -325,6 +326,29 @@ function Show-ProgressWindow {
                 $server.Profile = $browserProfile
                 $script:UiServer = $server
                 Write-HandoffLog "shim: default-browser app window on 127.0.0.1:$($server.Port)"
+                # The script was spawned via `cmd start /min`, so this window
+                # comes up backgrounded (just like the WinForms card path, which
+                # calls Activate()+SetForegroundWindow). Bring it to the front
+                # once so the user actually SEES the update start -- then never
+                # again (it competes with nothing; no TopMost).
+                if ($script:Win32) {
+                    try {
+                        $deadline = (Get-Date).AddSeconds(15)
+                        while ((Get-Date) -lt $deadline) {
+                            $hwnd = $server.BrowserProc.MainWindowHandle
+                            if ($hwnd -ne [System.IntPtr]::Zero) {
+                                [HermesHandoff.Win32]::ShowWindow($hwnd, 9) | Out-Null   # SW_RESTORE
+                                [HermesHandoff.Win32]::SetForegroundWindow($hwnd) | Out-Null
+                                Write-HandoffLog "shim: focused app window"
+                                break
+                            }
+                            if ($server.BrowserProc.HasExited) { break }
+                            Start-Sleep -Milliseconds 400
+                        }
+                    } catch {
+                        Write-HandoffLog "WARNING: could not focus shim window: $($_.Exception.Message)"
+                    }
+                }
                 return
             } catch {
                 try { $server.Listener.Stop() } catch {}
