@@ -14,14 +14,16 @@ concurrency:
 jobs:
   test:
     name: Run tests
-    # One 96-core runner for the whole suite. There is no slicing. Slicing
-    # existed to spread the suite over 4-core runners. It cost a matrix job, a
-    # duration cache, a per-slice artifact and a merge job to do it.
+    # One runner for the whole suite (no slicing — slicing added a matrix job,
+    # a duration cache, a per-slice artifact and a merge job for no real gain
+    # once a single runner clears the slowest-file floor of ~82s).
     #
-    # 96 cores clear the floor that the slowest single test file sets (about
-    # 82s). A second slice divides work that is already at that floor, and
-    # adds a second setup.
-    runs-on: ubuntu-latest-96-core
+    # NOTE: was `ubuntu-latest-96-core` for speed, but the large-runner pool is
+    # scarce and parks in queue after GitHub Actions outages. Standard
+    # `ubuntu-latest` starts immediately. To restore the faster big-runner run,
+    # set this back to `ubuntu-latest-96-core` (and the matching labels in
+    # js-tests.yml / nix.yml below).
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Checkout code
