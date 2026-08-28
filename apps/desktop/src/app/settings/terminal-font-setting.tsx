@@ -8,8 +8,8 @@ import {
 } from '@/app/right-sidebar/terminal/terminal-font'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { saveHermesConfig } from '@/kova'
 import { useI18n } from '@/i18n'
+import { saveHermesConfig } from '@/kova'
 import { notifyError } from '@/store/notifications'
 import type { HermesConfigRecord } from '@/types/kova'
 

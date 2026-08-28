@@ -1,6 +1,6 @@
 import { ConfirmDialog } from '@/components/ui/confirm-dialog'
-import { deleteLearningNode, type ProfileScope } from '@/kova'
 import { type Translations, useI18n } from '@/i18n'
+import { deleteLearningNode, type ProfileScope } from '@/kova'
 import { notify } from '@/store/notifications'
 
 export const ARCHIVE_SKILL_DESCRIPTION = 'The skill is archived and can be restored with `kova curator restore`.'
