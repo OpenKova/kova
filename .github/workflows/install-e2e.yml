@@ -66,12 +66,14 @@ jobs:
       # This job only reads tag names and runs one script, so take the cheap
       # checkout: no blobs (filter), no other files (sparse), but DO fetch tags
       # -- they are the whole input, and the default shallow checkout has none.
+      # fetch-depth: 0 is belt-and-suspenders with fetch-tags: true; the
+      # combined `filter: blob:none` + `sparse-checkout` configuration has been
+      # observed to drop the tag deref in practice, so the deeper fetch is the
+      # only setting that reliably gives pick-release-tags.sh anything to read.
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          filter: blob:none
+          fetch-depth: 0
           fetch-tags: true
-          sparse-checkout: scripts/sandbox/pick-release-tags.sh
-          sparse-checkout-cone-mode: false
       - id: pick
         run: |
           set -euo pipefail

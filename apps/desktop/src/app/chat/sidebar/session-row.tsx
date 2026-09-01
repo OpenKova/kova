@@ -8,7 +8,6 @@ import { startSessionDrag } from '@/app/chat/session-drag'
 import { PlatformAvatar } from '@/app/messaging/platform-icon'
 import { openSession } from '@/app/open-session'
 import { formatMessageTimestamp } from '@/components/assistant-ui/thread/timestamp'
-import { Button } from '@/components/ui/button'
 import { Codicon } from '@/components/ui/codicon'
 import { OverflowTip, Tip } from '@/components/ui/tooltip'
 import { type Translations, useI18n } from '@/i18n'
@@ -319,18 +318,18 @@ function SidebarSessionRowImpl({
         title={title}
         unread={unread}
       >
-        <Button
+        <div
           aria-label={r.sessionActions}
           className={cn(
-            'size-5 rounded-[4px] bg-transparent text-transparent transition-colors duration-100 hover:bg-(--ui-control-active-background) hover:text-foreground focus-visible:bg-(--ui-control-active-background) focus-visible:text-foreground focus-visible:ring-0 data-[state=open]:bg-(--ui-control-active-background) data-[state=open]:text-foreground group-hover:text-(--ui-text-tertiary) [&_svg]:size-3.5!',
+            'inline-flex shrink-0 cursor-pointer items-center justify-center size-5 rounded-[4px] bg-transparent text-transparent transition-colors duration-100 hover:bg-(--ui-control-active-background) hover:text-foreground focus-visible:bg-(--ui-control-active-background) focus-visible:text-foreground focus-visible:ring-0 data-[state=open]:bg-(--ui-control-active-background) data-[state=open]:text-foreground group-hover:text-(--ui-text-tertiary) [&_svg]:size-3.5!',
             trailing.length > 0 && 'absolute right-0',
             pr && KEBAB_YIELDS
           )}
-          size="icon"
-          variant="ghost"
+          role="button"
+          tabIndex={0}
         >
           <Codicon name="kebab-vertical" size="0.875rem" />
-        </Button>
+        </div>
       </SessionActionsMenu>
     </div>
   )
