@@ -1903,7 +1903,7 @@ updates:
 #     are skipped with a startup warning (never a silent clobber)
 #   - a source's override_existing lets it beat .env/shell values, but
 #     never another secret source's claim
-# Docs: https://kova-agent.nousresearch.com/docs/user-guide/secrets/
+# Docs: https://kova-agent.neuralstudio.in/docs/user-guide/secrets/
 #
 # secrets:
 #   # Optional explicit ordering of enabled sources.
