@@ -8,12 +8,12 @@
       24  https://github.com/NousResearch/kova-agent
 
 == docs-site: 261 refs, 72 unique ==
-      32  https://kova-agent.nousresearch.com
-      20  https://kova-agent.nousresearch.com/docs/
-      14  https://kova-agent.nousresearch.com/
-       9  https://kova-agent.nousresearch.com/docs/user-guide/cli
-       9  https://kova-agent.nousresearch.com/docs/api/model-catalog.json
-       8  https://kova-agent.nousresearch.com/docs/user-guide/messaging
+      32  https://kova-agent.neuralstudio.in
+      20  https://kova-agent.neuralstudio.in/docs/
+      14  https://kova-agent.neuralstudio.in/
+       9  https://kova-agent.neuralstudio.in/docs/user-guide/cli
+       9  https://kova-agent.neuralstudio.in/docs/api/model-catalog.json
+       8  https://kova-agent.neuralstudio.in/docs/user-guide/messaging
 
 == other-kova-domains: 250 refs, 114 unique ==
       41  https://gateway.example.com/kova
@@ -54,6 +54,6 @@
        2  https://inference-api.nousresearch.com/v1/messages
 
 == install.sh: 59 refs, 3 unique ==
-      43  https://kova-agent.nousresearch.com/install.sh
-      15  https://kova-agent.nousresearch.com/install.ps1
-       1  https://kova-agent.nousresearch.com/docs/getting-started/installation\n
+      43  https://kova-agent.neuralstudio.in/install.sh
+      15  https://kova-agent.neuralstudio.in/install.ps1
+       1  https://kova-agent.neuralstudio.in/docs/getting-started/installation\n

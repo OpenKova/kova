@@ -4220,7 +4220,7 @@ def check_for_skill_updates(
 # Kova centralized index source
 # ---------------------------------------------------------------------------
 
-KOVA_INDEX_URL = "https://kova-agent.nousresearch.com/docs/api/skills-index.json"
+KOVA_INDEX_URL = "https://kova-agent.neuralstudio.in/docs/api/skills-index.json"
 KOVA_INDEX_TTL = 6 * 3600  # 6 hours
 
 
