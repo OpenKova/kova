@@ -325,6 +325,10 @@ function SidebarSessionRowImpl({
             trailing.length > 0 && 'absolute right-0',
             pr && KEBAB_YIELDS
           )}
+          onClick={event => event.stopPropagation()}
+          onMouseDown={event => event.stopPropagation()}
+          onPointerDown={event => event.stopPropagation()}
+          onPointerUp={event => event.stopPropagation()}
           role="button"
           tabIndex={0}
         >
