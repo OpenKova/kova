@@ -9,9 +9,7 @@ describe('formatDesktopLogLine', () => {
     // Shape contract (not a snapshot): every desktop log line starts with
     // an ISO timestamp so multi-surface logs are chronologically readable.
     // See #84405.
-    expect(line).toMatch(
-      /^\[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\] \[kova\] \[boot\] Resolving Kova backend$/
-    )
+    expect(line).toMatch(/^\[\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z\] \[kova\] \[boot\] Resolving Kova backend$/)
   })
 
   it('keeps the message verbatim after the prefix', () => {

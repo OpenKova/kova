@@ -84,12 +84,7 @@ export function getClipboardPath(): ClipboardPath {
 }
 
 export function shouldEmitClipboardSequence(env: NodeJS.ProcessEnv = process.env): boolean {
-  const override = (
-    env.KOVA_TUI_FORCE_OSC52 ??
-    env.KOVA_TUI_CLIPBOARD_OSC52 ??
-    env.KOVA_TUI_COPY_OSC52 ??
-    ''
-  ).trim()
+  const override = (env.KOVA_TUI_FORCE_OSC52 ?? env.KOVA_TUI_CLIPBOARD_OSC52 ?? env.KOVA_TUI_COPY_OSC52 ?? '').trim()
 
   if (ENV_ON_RE.test(override)) {
     return true

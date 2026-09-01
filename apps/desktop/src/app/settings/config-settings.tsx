@@ -106,8 +106,7 @@ function ConfigSettingsInner({
   } = useQuery({
     // Base key when following the active profile (matches every pre-existing
     // consumer); suffixed only for an explicit scope override.
-    queryKey:
-      scopeProfile == null ? ['kova-config-schema'] : ['kova-config-schema', normalizeProfileKey(scopeProfile)],
+    queryKey: scopeProfile == null ? ['kova-config-schema'] : ['kova-config-schema', normalizeProfileKey(scopeProfile)],
     queryFn: () => getHermesConfigSchema(scopeProfile),
     staleTime: 5 * 60 * 1000
   })
