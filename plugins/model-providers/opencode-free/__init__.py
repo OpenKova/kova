@@ -20,9 +20,9 @@ from providers.base import ProviderProfile
 # off the wire (the free tier 401s any unrecognized bearer).
 _KEYLESS_HEADERS = {
     "Authorization": "",
-    "HTTP-Referer": "https://kova-agent.nousresearch.com",
+    "HTTP-Referer": "https://kova-agent.neuralstudio.in",
     "X-Title": "Kova Agent",
-    "User-Agent": f"HermesAgent/{_HERMES_VERSION}",
+    "User-Agent": f"KovaAgent/{_HERMES_VERSION}",
 }
 
 
