@@ -14,9 +14,7 @@ afterEach(cleanup)
  */
 describe('a sent reference renders as the chip the composer showed', () => {
   it('chips a backtick-quoted @url: instead of splitting it into code', () => {
-    render(
-      <UserMessageText text="@url:`https://github.com/NousResearch/kova-agent/pull/74790` urls lose formatting" />
-    )
+    render(<UserMessageText text="@url:`https://github.com/NousResearch/kova-agent/pull/74790` urls lose formatting" />)
 
     expect(screen.queryByTitle('https://github.com/NousResearch/kova-agent/pull/74790')).not.toBeNull()
     // The whole reference is one node — no bare `@url:` text left behind.

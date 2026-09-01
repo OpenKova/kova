@@ -1233,8 +1233,7 @@ export const zh: Translations = {
       disableTool: tool => `禁用 ${tool}`,
       noOutput: '暂无输出。',
       deepLinkTitle: '添加 MCP 服务器？',
-      deepLinkDescription:
-        '一个链接请求将此 MCP 服务器添加到 Kova。请检查下方的完整配置——它来自该链接，而非 Kova。',
+      deepLinkDescription: '一个链接请求将此 MCP 服务器添加到 Kova。请检查下方的完整配置——它来自该链接，而非 Kova。',
       deepLinkStdioWarning: '此服务器会使用下方所示命令在你的电脑上运行本地进程。仅在信任其来源时继续。',
       deepLinkConfirm: '添加服务器',
       deepLinkNameInvalid: '名称须为 1-64 个字母、数字、点、连字符或下划线。',
@@ -1905,8 +1904,7 @@ export const zh: Translations = {
       matrix: '用机器人账户登录你的 homeserver，然后复制访问令牌、用户 ID 和 homeserver URL。',
       signal: '在可访问的位置运行 signal-cli REST 桥接，然后把 Kova 指向该 URL 和已注册的电话号码。',
       whatsapp: '启动 Kova 自带的 WhatsApp 桥接，首次运行时扫描二维码，然后启用该平台。',
-      bluebubbles:
-        '在装有 iMessage 的 Mac 上运行 BlueBubbles Server，暴露其 API，然后用服务器密码把 Kova 指向该 URL。',
+      bluebubbles: '在装有 iMessage 的 Mac 上运行 BlueBubbles Server，暴露其 API，然后用服务器密码把 Kova 指向该 URL。',
       homeassistant: '在 Home Assistant 中打开你的个人资料并创建长期访问令牌。把它连同你的 HA URL 一起粘贴到这里。',
       email: '使用专用邮箱。对于 Gmail/Workspace,创建应用专用密码并使用 imap.gmail.com / smtp.gmail.com。',
       sms: '从 Twilio 控制台获取你的 Account SID 和 Auth Token，以及一个可发送短信的电话号码。',
@@ -1917,8 +1915,7 @@ export const zh: Translations = {
       weixin:
         '运行 `kova gateway setup`，选择 Weixin，然后使用个人微信账号扫描并确认二维码。Kova 会通过腾讯 iLink Bot API 连接并保存凭据。',
       qqbot: '在 QQ 开放平台 (q.qq.com) 注册一个应用，复制 App ID 和 Client Secret。',
-      api_server:
-        '把 Kova 暴露为兼容 OpenAI 的 API。设置一个鉴权密钥，然后把 Open WebUI / LobeChat 等指向 host:port。',
+      api_server: '把 Kova 暴露为兼容 OpenAI 的 API。设置一个鉴权密钥，然后把 Open WebUI / LobeChat 等指向 host:port。',
       webhook: '运行一个 HTTP 服务器，供其他工具 (GitHub、GitLab、自定义应用)POST。用 secret 验证签名。'
     }
   },
@@ -2749,8 +2746,7 @@ export const zh: Translations = {
     copy: '复制',
     copied: '已复制',
     done: '完成',
-    applyingBody:
-      'Kova 更新器会在自己的窗口中接管，并在完成后自动重新打开 Kova。更新期间请不要自行重新打开 Kova。',
+    applyingBody: 'Kova 更新器会在自己的窗口中接管，并在完成后自动重新打开 Kova。更新期间请不要自行重新打开 Kova。',
     applyingBodyBackend: '远程后端正在应用更新并将重启。恢复后 Kova 会自动重新连接。',
     applyingClose: '此窗口会在更新期间关闭，随后 Kova 会自动重新打开。',
     errorTitle: '更新未完成',
