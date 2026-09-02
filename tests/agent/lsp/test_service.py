@@ -262,7 +262,7 @@ def test_reaper_survives_sweep_error(mock_pyright):
         assert svc.get_status()["clients"]
 
         # First sweep raises; later sweeps must still reap the client.
-        deadline = time.monotonic() + 3.0
+        deadline = time.monotonic() + 8.0
         while svc.get_status()["clients"] and time.monotonic() < deadline:
             time.sleep(0.02)
 

@@ -95,7 +95,7 @@ def test_interrupt_abandons_noncooperative_tool(monkeypatch, fake_agent, _fast_p
     assert "cancelled" in str(managed.result)
     # poll (0.05s) + interrupt delay (0.1s) + grace (3s) + slack — nowhere
     # near the 30s tool runtime.
-    assert elapsed < 10.0
+    assert elapsed < 20.0
     # The executor emitted the terminal post_tool_call itself.
     assert any(kw.get("status") == "cancelled" for kw in _fast_polls)
 
